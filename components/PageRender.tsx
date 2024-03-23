@@ -3,6 +3,7 @@ import Header from "./Header";
 import TeamPage from "./team";
 import InterviewPage from "./interview";
 import FilterHeader from "./team/FilterHeader";
+import TeamDetailPage from "./teamDetail";
 
 interface PageRenderProps {
   props?: any;
@@ -16,6 +17,9 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
       {props.url === "/team" && <FilterHeader />}
       <Contents>
         {props.url === "/team" && <TeamPage />}
+        {props.url.split("/")[1] === "team" && props.url.split("/")[2] && (
+          <TeamDetailPage id={props.url.split("/")[2]} />
+        )}
         {props.url === "/interview" && <InterviewPage />}
       </Contents>
     </Container>
@@ -31,7 +35,7 @@ const Contents = styled.div`
   margin: ${(props) => props.theme.mediaQuery.pcMargin};
   min-height: 100dvh;
   background-color: white;
-  margin-top: 5px;
+  margin-top: 10px;
 
   @media screen and (max-width: 1150px) {
     width: ${(props) => props.theme.mediaQuery.mobileWidth};

@@ -68,8 +68,9 @@ const SortBtn = styled.select`
   height: 30px;
   padding: 0px 5px 0px 10px;
   border-radius: 7px;
-  border: 1px solid lightgray;
+  border: ${(props) => `1px solid ${props.theme.color.border_gray}`};
   cursor: pointer;
+  background-color: white;
 
   p {
     font-size: 14px;

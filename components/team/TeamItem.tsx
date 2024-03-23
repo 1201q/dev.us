@@ -1,11 +1,13 @@
 import { IconCalendar, IconHeart, IconPeople } from "@/public/svgs";
+import Link from "next/link";
 import styled from "styled-components";
 
 const TeamItem = ({ title }: { title: string }) => {
   return (
     <Container>
       <Contents>
-        <HeaderText>{title}</HeaderText>
+        <HeaderText href={"/team/123123213123"}>{title}</HeaderText>
+
         <OtherInfoContainer>
           <IconPeople />
           <OtherInfoText>모집 4명</OtherInfoText>
@@ -59,9 +61,9 @@ const Stack = styled.div`
   margin-right: 5px;
 `;
 
-const HeaderText = styled.p`
+const HeaderText = styled(Link)`
   width: 100%;
-  height: 67px;
+  height: 66px;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: -0.2px;
@@ -74,6 +76,8 @@ const HeaderText = styled.p`
   display: -webkit-box;
   line-height: normal;
   margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
 
   :hover {
     text-decoration: underline;

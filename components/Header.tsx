@@ -13,10 +13,10 @@ const Header = ({ url }: { url: string }) => {
             <span>us</span>
           </Logo>
           <MenuContainer>
-            <Menu href={"/team"} select={url === "/team"}>
+            <Menu href={"/team"} $select={url.split("/")[1] === "team"}>
               모임
             </Menu>
-            <Menu href={"/interview"} select={url === "/interview"}>
+            <Menu href={"/interview"} $select={url === "/interview"}>
               AI 면접
             </Menu>
           </MenuContainer>
@@ -72,14 +72,15 @@ const MenuContainer = styled.div`
   }
 `;
 
-const Menu = styled(Link)<{ select: boolean }>`
+const Menu = styled(Link)<{ $select: boolean }>`
   font-size: 22px;
   font-weight: 800;
   margin-right: 30px;
   cursor: pointer;
   letter-spacing: -1px;
   text-decoration: none;
-  color: ${(props) => (props.select ? "black" : "#b7bfc7")};
+  color: ${(props) =>
+    props.$select ? "black" : props.theme.color.f_lightGray};
 `;
 
 const Logo = styled(Link)`
@@ -100,7 +101,7 @@ const LoginBtn = styled.button`
   font-size: 15px;
   font-weight: 600;
   border: none;
-  background-color: black;
+  background-color: ${(props) => props.theme.color.bg_black};
   color: white;
   border-radius: 8px;
   cursor: pointer;

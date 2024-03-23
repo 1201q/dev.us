@@ -38,7 +38,7 @@ const Container = styled.header`
   z-index: 100;
   background-color: white;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1150px) {
     height: 60px;
   }
 `;
@@ -51,7 +51,7 @@ const Margin = styled.div`
   height: 100%;
   margin: ${(props) => props.theme.mediaQuery.pcMargin};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1150px) {
     width: ${(props) => props.theme.mediaQuery.mobileWidth};
     margin: ${(props) => props.theme.mediaQuery.mobileMargin};
   }

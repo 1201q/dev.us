@@ -1,5 +1,7 @@
 import IconMenu from "./menu.svg";
 import IconSearch from "./search.svg";
 import IconDown from "./down.svg";
-
-export { IconMenu, IconSearch, IconDown };
+import IconHeart from "./heart.svg";
+import IconPeople from "./people.svg";
+import IconCalendar from "./calendar.svg";
+export { IconMenu, IconSearch, IconDown, IconHeart, IconPeople, IconCalendar };

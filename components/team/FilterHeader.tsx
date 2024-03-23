@@ -85,6 +85,7 @@ const FilterHeader = () => {
         <SideTab>
           {tab.map((option, index) => (
             <Tab
+              key={option.name}
               select={option.select}
               topOption={tab[0].select}
               bottomOption={tab[3].select}
@@ -100,7 +101,7 @@ const FilterHeader = () => {
         </SideTab>
         <OptionContainer>
           {renderOptions().map((option, index) => (
-            <Option>{option}</Option>
+            <Option key={option}>{option}</Option>
           ))}
         </OptionContainer>
       </FilterContainer>
@@ -125,7 +126,7 @@ const FilterHeaderContainer = styled.div<{ borderVisible: boolean }>`
   padding-bottom: 15px;
   padding-top: 10px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1150px) {
     padding: ${(props) => props.theme.mediaQuery.mobileMargin};
     padding-bottom: 15px;
     padding-top: 10px;

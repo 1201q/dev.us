@@ -33,7 +33,7 @@ const Contents = styled.div`
   background-color: white;
   margin-top: 5px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1150px) {
     width: ${(props) => props.theme.mediaQuery.mobileWidth};
     margin: ${(props) => props.theme.mediaQuery.mobileMargin};
   }

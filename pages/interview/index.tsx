@@ -11,13 +11,28 @@ export interface ServerSideProps {
 }
 
 export default function Home({ isLogin, uid, url }: ServerSideProps) {
-  return <></>;
+  return <PageRender props={{ uid, url }} />;
 }
 
 export const getServerSideProps: GetServerSideProps = async (
   ctx: any
 ): Promise<{ props: ServerSideProps } | { redirect: Redirect }> => {
-  return { redirect: { destination: "/team" } } as {
-    redirect: Redirect;
-  };
+  const cookies = nookies.get(ctx);
+  let isLogin = false;
+  let uid = null;
+  let url = ctx?.resolvedUrl;
+  try {
+    const token = await admin?.auth().verifyIdToken(cookies.token);
+
+    if (token) {
+      uid = token.uid;
+      isLogin = true;
+    }
+
+    return { props: { isLogin, uid, url } };
+  } catch (error) {
+    return { redirect: { destination: "/auth/login" } } as {
+      redirect: Redirect;
+    };
+  }
 };

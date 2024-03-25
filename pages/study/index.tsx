@@ -1,6 +1,5 @@
 import nookies from "nookies";
 import { GetServerSideProps, Redirect } from "next";
-
 import PageRender from "@/components/PageRender";
 import getUser from "@/utils/common/getUser";
 
@@ -18,10 +17,15 @@ export const getServerSideProps: GetServerSideProps = async (
   ctx: any
 ): Promise<{ props: ServerSideProps } | { redirect: Redirect }> => {
   const cookies = nookies.get(ctx);
-
   let url = ctx?.resolvedUrl;
 
   const { isLogin, uid } = await getUser(cookies.token);
 
-  return { props: { isLogin, uid, url } };
+  if (isLogin) {
+    return { props: { isLogin, uid, url } };
+  } else {
+    return { redirect: { destination: "/auth/login" } } as {
+      redirect: Redirect;
+    };
+  }
 };

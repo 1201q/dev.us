@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import Header from "./Header";
 import TeamPage from "./team";
-import InterviewPage from "./interview";
+import LoungePage from "./lounge";
 import FilterHeader from "./team/FilterHeader";
 import TeamDetailPage from "./teamDetail";
+import LoungeDetailPage from "./loungeDetail";
 
 interface PageRenderProps {
   props?: any;
@@ -20,7 +21,10 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
         {props.url.split("/")[1] === "team" && props.url.split("/")[2] && (
           <TeamDetailPage id={props.url.split("/")[2]} />
         )}
-        {props.url === "/interview" && <InterviewPage />}
+        {props.url === "/lounge" && <LoungePage />}
+        {props.url.split("/")[1] === "lounge" && props.url.split("/")[2] && (
+          <LoungeDetailPage id={props.url.split("/")[2]} />
+        )}
       </Contents>
     </Container>
   );

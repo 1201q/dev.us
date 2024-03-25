@@ -1,8 +1,8 @@
 import nookies from "nookies";
 import { GetServerSideProps, Redirect } from "next";
-import { admin } from "@/utils/firebase/admin";
 
 import PageRender from "@/components/PageRender";
+import getUser from "@/utils/common/getUser";
 
 export interface ServerSideProps {
   isLogin?: boolean;
@@ -18,21 +18,10 @@ export const getServerSideProps: GetServerSideProps = async (
   ctx: any
 ): Promise<{ props: ServerSideProps } | { redirect: Redirect }> => {
   const cookies = nookies.get(ctx);
-  let isLogin = false;
-  let uid = null;
+
   let url = ctx?.resolvedUrl;
-  try {
-    const token = await admin?.auth().verifyIdToken(cookies.token);
 
-    if (token) {
-      uid = token.uid;
-      isLogin = true;
-    }
+  const { isLogin, uid } = await getUser(cookies.token);
 
-    return { props: { isLogin, uid, url } };
-  } catch (error) {
-    return { redirect: { destination: "/auth/login" } } as {
-      redirect: Redirect;
-    };
-  }
+  return { props: { isLogin, uid, url } };
 };

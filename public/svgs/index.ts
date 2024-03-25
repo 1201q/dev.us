@@ -4,4 +4,13 @@ import IconDown from "./down.svg";
 import IconHeart from "./heart.svg";
 import IconPeople from "./people.svg";
 import IconCalendar from "./calendar.svg";
-export { IconMenu, IconSearch, IconDown, IconHeart, IconPeople, IconCalendar };
+import IconComment from "./comment.svg";
+export {
+  IconMenu,
+  IconSearch,
+  IconDown,
+  IconHeart,
+  IconPeople,
+  IconCalendar,
+  IconComment,
+};

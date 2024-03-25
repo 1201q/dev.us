@@ -16,8 +16,11 @@ const Header = ({ url }: { url: string }) => {
             <Menu href={"/team"} $select={url.split("/")[1] === "team"}>
               모임
             </Menu>
-            <Menu href={"/interview"} $select={url === "/interview"}>
-              AI 면접
+            <Menu href={"/lounge"} $select={url.split("/")[1] === "lounge"}>
+              라운지
+            </Menu>
+            <Menu href={"/study"} $select={url === "/study"}>
+              스터디
             </Menu>
           </MenuContainer>
         </Flex>

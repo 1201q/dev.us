@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import CommentItem from "./CommentItem";
 
 const LoungeDetail = ({ id }: { id: string }) => {
   return (
@@ -10,6 +11,9 @@ const LoungeDetail = ({ id }: { id: string }) => {
           플젝입니다!! 플젝 경험/배포 운영하기 최적의 조건을 갖춘 사이드
           프로젝트 팀원 모집합니다!
         </TitleText>
+        <InfoContainer>
+          <p>작성자 | 12분전</p>
+        </InfoContainer>
 
         <div>
           팀원들이 오픈소스를 활용해서 한번도 프로젝트를 안해봤어요 저도
@@ -19,7 +23,13 @@ const LoungeDetail = ({ id }: { id: string }) => {
           프로그래머들이 사용해야할 오픈 소스들이 뭐가 있을까요?
         </div>
       </Content>
-      <CommentContainer>1</CommentContainer>
+      <CommentContainer>
+        <CommentItem />
+        <CommentItem />
+        <CommentItem />
+        <CommentItem />
+        <CommentItem />
+      </CommentContainer>
     </Container>
   );
 };
@@ -35,8 +45,21 @@ const Container = styled.div`
 
 const CommentContainer = styled.div`
   margin-top: 50px;
-  height: 500px;
-  background-color: ${(props) => props.theme.color.bg_gray};
+  display: grid;
+  row-gap: 15px;
+`;
+
+const InfoContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+  margin-bottom: 30px;
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: ${(props) => props.theme.color.f_lightGray};
+  }
 `;
 
 const Content = styled.div`
@@ -63,7 +86,6 @@ const TitleText = styled.p`
   font-size: 22px;
   font-weight: 600;
   line-height: normal;
-  margin-bottom: 40px;
 `;
 
 export default LoungeDetail;

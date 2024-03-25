@@ -29,7 +29,7 @@ const ListHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   p {
     font-size: 22px;

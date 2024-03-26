@@ -1,53 +1,140 @@
 import styled from "styled-components";
 import { techField, techStack } from "@/constants/options";
 import { IconX } from "@/public/svgs";
+import { useAtom } from "jotai";
+import {
+  quizDifficultyOptionsAtom,
+  quizFieldOptionsAtom,
+  quizFieldDetailOptionsAtom,
+  quizStackOptionsAtom,
+} from "@/context/location";
+import { useEffect, useState } from "react";
 
 const QuizFilter = () => {
-  const filedOptions = ["경험", "CS지식", "기술스택"];
-  const difficultyOptions = ["쉬움", "중간", "어려움"];
+  const [initRender, setInitRender] = useState(false);
+  const [selectFieldOption, setSelectFieldOption] =
+    useAtom(quizFieldOptionsAtom);
+  const [selectDifficultyOption, setSelectDifficultyOption] = useAtom(
+    quizDifficultyOptionsAtom
+  );
+  const [selectFieldDetailOption, setSelectFieldDetailOption] = useAtom(
+    quizFieldDetailOptionsAtom
+  );
+  const [selectStackOptions, setSelectStackOption] =
+    useAtom(quizStackOptionsAtom);
 
-  const Stack = () => {
+  const fieldOptions = [
+    { name: "경험", option: "experience" },
+    { name: "CS지식", option: "cs" },
+    { name: "기술스택", option: "stack" },
+  ];
+  const difficultyOptions = [
+    { name: "쉬움", option: "1" },
+    { name: "중간", option: "2" },
+    { name: "어려움", option: "3" },
+  ];
+
+  const Stack = (option: any) => {
     return (
       <StackItem>
-        <p>스택</p> <IconX width={8} height={8} />
+        <p>{techStack.find((o) => o.option === option)?.name}</p>
+        <IconX width={8} height={8} />
       </StackItem>
     );
   };
 
+  useEffect(() => {
+    setInitRender(true);
+  }, []);
+
+  console.log(selectStackOptions);
+
   return (
-    <Container>
-      <InfoHeaderText>검색</InfoHeaderText>
-      <Input as="input" type="text" placeholder="키워드 검색" />
-      <InfoHeaderText>분야</InfoHeaderText>
-      <SortBtn>
-        <option>전체</option>
-        {filedOptions.map((o) => (
-          <option>{o}</option>
-        ))}
-      </SortBtn>
-      <InfoHeaderText>난이도순</InfoHeaderText>
-      <SortBtn>
-        <option>전체</option>
-        {difficultyOptions.map((o) => (
-          <option>{o}</option>
-        ))}
-      </SortBtn>
-      <InfoHeaderText>분야 상세</InfoHeaderText>
-      <SortBtn>
-        <option>전체</option>
-        {techField.map((o, i) => (
-          <option>{o}</option>
-        ))}
-      </SortBtn>
-      <InfoHeaderText>기술스택 상세</InfoHeaderText>
-      <SortBtn>
-        <option>전체</option>
-        {techStack.map((o, i) => (
-          <option>{o}</option>
-        ))}
-      </SortBtn>
-      <StackContainer>{Stack()}</StackContainer>
-    </Container>
+    <>
+      {initRender && (
+        <Container>
+          <InfoHeaderText>검색</InfoHeaderText>
+          <Input as="input" type="text" placeholder="키워드 검색" />
+          <InfoHeaderText>분야</InfoHeaderText>
+          <SortBtn
+            key={"field-option"}
+            onChange={(e) => {
+              const { value } = e.target;
+              setSelectFieldOption(value);
+            }}
+            value={selectFieldOption}
+          >
+            <option key="field-all" value="all">
+              전체
+            </option>
+            {fieldOptions.map((o) => (
+              <option key={o.name} value={o.option}>
+                {o.name}
+              </option>
+            ))}
+          </SortBtn>
+          <InfoHeaderText>난이도순</InfoHeaderText>
+          <SortBtn
+            key={"difficulty-option"}
+            onChange={(e) => {
+              const { value } = e.target;
+              setSelectDifficultyOption(value);
+            }}
+            value={selectDifficultyOption}
+          >
+            <option key="difficulty-all" value={"all"}>
+              전체
+            </option>
+            {difficultyOptions.map((o) => (
+              <option key={o.name} value={o.option}>
+                {o.name}
+              </option>
+            ))}
+          </SortBtn>
+          <InfoHeaderText>분야 상세</InfoHeaderText>
+          <SortBtn
+            key="fieldDetail-all"
+            onChange={(e) => {
+              const { value } = e.target;
+              setSelectFieldDetailOption(value);
+            }}
+            value={selectFieldDetailOption}
+          >
+            <option key="fieldDetail-all" value={"all"}>
+              전체
+            </option>
+            {techField.map((o, i) => (
+              <option key={o.option} value={o.option}>
+                {o.name}
+              </option>
+            ))}
+          </SortBtn>
+          <InfoHeaderText>기술스택 상세</InfoHeaderText>
+          <SortBtn
+            key="stack"
+            onChange={(e) => {
+              const { value } = e.target;
+              setSelectStackOption((prev) => [...prev, value]);
+            }}
+            value={"all"}
+          >
+            <option key="fieldDetail-all" value={"all"}>
+              스택을 선택하세요
+            </option>
+            {techStack.map((o, i) => (
+              <option key={o.option} value={o.option}>
+                {o.name}
+              </option>
+            ))}
+          </SortBtn>
+          <StackContainer>
+            {selectStackOptions.map((o, i) => {
+              return Stack(o);
+            })}
+          </StackContainer>
+        </Container>
+      )}
+    </>
   );
 };
 

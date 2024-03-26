@@ -26,7 +26,7 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
         {props.url.split("/")[1] === "lounge" && props.url.split("/")[2] && (
           <LoungeDetailPage id={props.url.split("/")[2]} />
         )}
-        {props.url === "/quiz" && <QuizPage />}
+        {props.url.split("/")[1] === "quiz" && <QuizPage />}
       </Contents>
     </Container>
   );
@@ -40,7 +40,7 @@ const Contents = styled.div`
   width: ${(props) => props.theme.mediaQuery.pcWidth};
   margin: ${(props) => props.theme.mediaQuery.pcMargin};
   min-height: 100dvh;
-  background-color: white;
+  background: none;
   margin-top: 10px;
 
   @media screen and (max-width: 1150px) {

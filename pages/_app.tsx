@@ -4,6 +4,7 @@ import { AuthProvider } from "@/utils/firebase/provider";
 import "@/utils/firebase/client";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@/styles/theme";
+import { Provider } from "jotai";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

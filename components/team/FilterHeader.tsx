@@ -9,7 +9,12 @@ const FilterHeader = () => {
     { select: false, name: "종류" },
   ]);
   const [borderVisible, setBorderVisible] = useState(false);
-  const teamType = ["사이드 프로젝트", "스터디", "대회/공모전"];
+
+  const teamType = [
+    { name: "사이드 프로젝트", option: "side" },
+    { name: "스터디", option: "study" },
+    { name: "대회/공모전", option: "competition" },
+  ];
 
   const renderOptions = () => {
     if (tab[0].select) return techStack;
@@ -53,8 +58,8 @@ const FilterHeader = () => {
           ))}
         </SideTab>
         <OptionContainer>
-          {renderOptions().map((option, index) => (
-            <Option key={option}>{option}</Option>
+          {renderOptions().map((o, index) => (
+            <Option key={o.option}>{o.name}</Option>
           ))}
         </OptionContainer>
       </FilterContainer>

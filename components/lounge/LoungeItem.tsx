@@ -29,7 +29,7 @@ const LoungeItem = ({ title }: { title: string }) => {
 };
 
 const Container = styled.div`
-  background-color: white;
+  background: none;
   border-bottom: 1px solid rgb(215, 226, 235);
   cursor: pointer;
   position: relative;

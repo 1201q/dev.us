@@ -19,8 +19,8 @@ const Header = ({ url }: { url: string }) => {
             <Menu href={"/lounge"} $select={url.split("/")[1] === "lounge"}>
               라운지
             </Menu>
-            <Menu href={"/study"} $select={url === "/study"}>
-              스터디
+            <Menu href={"/quiz"} $select={url === "/quiz"}>
+              퀴즈 라운지
             </Menu>
           </MenuContainer>
         </Flex>

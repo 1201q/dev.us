@@ -21,11 +21,5 @@ export const getServerSideProps: GetServerSideProps = async (
 
   const { isLogin, uid } = await getUser(cookies.token);
 
-  if (isLogin) {
-    return { props: { isLogin, uid, url } };
-  } else {
-    return { redirect: { destination: "/auth/login" } } as {
-      redirect: Redirect;
-    };
-  }
+  return { props: { isLogin, uid, url } };
 };

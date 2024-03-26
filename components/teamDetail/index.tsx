@@ -10,7 +10,9 @@ const TeamDetailPage = ({ id }: { id: string }) => {
           플젝입니다!! 플젝 경험/배포 운영하기 최적의 조건을 갖춘 사이드
           프로젝트 팀원 모집합니다!
         </TitleText>
-        <WriterInfo>리더 : 황준서</WriterInfo>
+        <WriterInfoContainer>
+          <p>작성자 | 12분전</p>
+        </WriterInfoContainer>
         <div>
           <div>
             <p>✅ 팀 소개</p>
@@ -81,7 +83,7 @@ const TeamDetailPage = ({ id }: { id: string }) => {
         </div>
       </Content>
       <Side>
-        <InfoContainer>
+        <SideInfoContainer>
           <Info>
             <InfoHeaderText>모집종류</InfoHeaderText>
             <InfoText>스터디</InfoText>
@@ -102,7 +104,7 @@ const TeamDetailPage = ({ id }: { id: string }) => {
             <InfoHeaderText>기술스택</InfoHeaderText>
             <InfoText>JavaScript, React</InfoText>
           </Info>
-        </InfoContainer>
+        </SideInfoContainer>
         <ButtonContainer>
           <Button>참여하기</Button>
           <Button bg="white">
@@ -179,21 +181,20 @@ const TitleText = styled.p`
   line-height: normal;
 `;
 
-const WriterInfo = styled.div`
+const WriterInfoContainer = styled.div`
   display: flex;
-  align-items: center;
   justify-content: flex-start;
-  height: 30px;
-  background-color: ${(props) => props.theme.color.bg_gray};
-  margin: 20px 0px 20px 0px;
-  border-radius: 7px;
-  font-size: 15px;
-  font-weight: 600;
-  color: ${(props) => props.theme.color.f_darkGray};
-  padding: 0px 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: ${(props) => props.theme.color.f_lightGray};
+  }
 `;
 
-const InfoContainer = styled.div`
+const SideInfoContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
 

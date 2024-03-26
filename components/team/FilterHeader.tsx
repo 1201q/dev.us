@@ -1,4 +1,4 @@
-import { IconSearch } from "@/public/svgs";
+import { techField, techStack } from "@/constants/options";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 
@@ -9,50 +9,6 @@ const FilterHeader = () => {
     { select: false, name: "종류" },
   ]);
   const [borderVisible, setBorderVisible] = useState(false);
-  const techStack = [
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Vue",
-    "Svelte",
-    "Nextjs",
-    "Nodejs",
-    "Java",
-    "Spring",
-    "Go",
-    "Nestjs",
-    "Kotlin",
-    "Express",
-    "MySQL",
-    "MongoDB",
-    "Python",
-    "Django",
-    "php",
-    "GraphQL",
-    "Firebase",
-    "Flutter",
-    "Swift",
-    "ReactNative",
-    "Unity",
-    "AWS",
-    "Kubernetes",
-    "Docker",
-    "Git",
-    "Figma",
-    "Zeplin",
-    "Jest",
-  ];
-  const techField = [
-    "서버/백엔드",
-    "프론트엔드",
-    "안드로이드",
-    "iOS",
-    "게임",
-    "머신러닝/인공지능",
-    "개발PM",
-    "데브옵스",
-    "디자인",
-  ];
   const teamType = ["사이드 프로젝트", "스터디", "대회/공모전"];
 
   const renderOptions = () => {

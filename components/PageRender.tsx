@@ -5,6 +5,7 @@ import LoungePage from "./lounge";
 import FilterHeader from "./team/FilterHeader";
 import TeamDetailPage from "./teamDetail";
 import LoungeDetailPage from "./loungeDetail";
+import QuizPage from "./quiz";
 
 interface PageRenderProps {
   props?: any;
@@ -25,6 +26,7 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
         {props.url.split("/")[1] === "lounge" && props.url.split("/")[2] && (
           <LoungeDetailPage id={props.url.split("/")[2]} />
         )}
+        {props.url === "/quiz" && <QuizPage />}
       </Contents>
     </Container>
   );

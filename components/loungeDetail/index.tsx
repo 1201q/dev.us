@@ -23,6 +23,10 @@ const LoungeDetail = ({ id }: { id: string }) => {
           프로그래머들이 사용해야할 오픈 소스들이 뭐가 있을까요?
         </div>
       </Content>
+      <CommentHeaderContainer>
+        <p>댓글</p>
+      </CommentHeaderContainer>
+
       <CommentContainer>
         <CommentItem />
         <CommentItem />
@@ -44,7 +48,6 @@ const Container = styled.div`
 `;
 
 const CommentContainer = styled.div`
-  margin-top: 50px;
   display: grid;
   row-gap: 15px;
 `;
@@ -86,6 +89,18 @@ const TitleText = styled.p`
   font-size: 22px;
   font-weight: 600;
   line-height: normal;
+`;
+
+const CommentHeaderContainer = styled.div`
+  margin-top: 80px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  p {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+  }
+  border-bottom: 1px solid rgb(215, 226, 235);
 `;
 
 export default LoungeDetail;

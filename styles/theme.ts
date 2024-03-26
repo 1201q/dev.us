@@ -11,6 +11,7 @@ export const theme = {
     mobileWidth: `calc(100% - ${mediaQ.mobileMargin * 2}px)`,
   },
   color: {
+    bg_lightGray: "rgb(251, 251, 253)",
     bg_gray: "#e9ecf3",
     bg_black: "#333333",
     f_darkGray: "#44576c",

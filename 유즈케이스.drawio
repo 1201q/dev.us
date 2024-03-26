@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-25T12:49:14.886Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Whale/3.25.232.19 Safari/537.36" etag="rkRV8-NEWxmr0mpP3KWP" version="24.1.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-26T00:31:21.091Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Whale/3.25.232.19 Safari/537.36" etag="TFr9wtd2maGK34B7WHuo" version="24.1.0" type="github">
   <diagram id="jTj0nOP97UvRc4CrnVmE" name="페이지-2">
-    <mxGraphModel dx="3553" dy="1737" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2995" dy="1498" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -45,16 +45,16 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="RSIxP8JftO4a3xVgUwhf-5" target="xbkJU-2Ecq9a6FRuG0pj-3" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=-0.005;entryY=0.895;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;entryPerimeter=0;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="RSIxP8JftO4a3xVgUwhf-5" target="xbkJU-2Ecq9a6FRuG0pj-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="RSIxP8JftO4a3xVgUwhf-7" target="xbkJU-2Ecq9a6FRuG0pj-3" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="RSIxP8JftO4a3xVgUwhf-7" target="xbkJU-2Ecq9a6FRuG0pj-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="RSIxP8JftO4a3xVgUwhf-6" target="xbkJU-2Ecq9a6FRuG0pj-3" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="RSIxP8JftO4a3xVgUwhf-6" target="xbkJU-2Ecq9a6FRuG0pj-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="RSIxP8JftO4a3xVgUwhf-8" target="xbkJU-2Ecq9a6FRuG0pj-3" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="RSIxP8JftO4a3xVgUwhf-8" target="xbkJU-2Ecq9a6FRuG0pj-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xbkJU-2Ecq9a6FRuG0pj-3" value="마이페이지" style="ellipse;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#bac8d3;strokeColor=#23445d;strokeWidth=2;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
@@ -88,7 +88,7 @@
           <mxGeometry x="361.5" y="30" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="MipSQJv0WckpIGKep5O7-2" value="관심 모임&amp;nbsp;&lt;span style=&quot;font-size: 14px;&quot;&gt;등록&lt;/span&gt;" style="ellipse;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#b1ddf0;strokeColor=#10739e;opacity=40;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
-          <mxGeometry x="300" y="80" width="70" height="30" as="geometry" />
+          <mxGeometry x="291.5" y="70" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="RtjWrgiDrUg9PwyguRAx-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="cXlgSNlOm7EEsly19OPD-1" target="xbkJU-2Ecq9a6FRuG0pj-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -137,19 +137,19 @@
             <mxPoint x="-124" y="-142" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="MipSQJv0WckpIGKep5O7-2" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="MipSQJv0WckpIGKep5O7-2" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-29" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.233;entryY=-0.108;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="MipSQJv0WckpIGKep5O7-1" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-29" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.233;entryY=-0.108;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="MipSQJv0WckpIGKep5O7-1" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-30" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Vzc4TBy5uDRJkHYQ5rnn-1" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-30" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Vzc4TBy5uDRJkHYQ5rnn-1" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-31" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.754;entryY=-0.049;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Vzc4TBy5uDRJkHYQ5rnn-2" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-31" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.754;entryY=-0.049;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Vzc4TBy5uDRJkHYQ5rnn-2" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="huwDGoITAxrcZlBKzeDQ-46" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="huwDGoITAxrcZlBKzeDQ-46" target="4BCtypjuSpM-yuh8mV4r-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4BCtypjuSpM-yuh8mV4r-1" value="모임&lt;div&gt;상호작용&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#b1ddf0;strokeColor=#10739e;strokeWidth=2;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
@@ -167,81 +167,81 @@
         <mxCell id="dA3zyy7pW2rvzDFR10JF-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;dashed=1;endArrow=classic;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="IklVNkg57ZsHUNvntp-u-1" target="NOhAKVlgrImQNk7xSUPU-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-24" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="f-m4LPaJYdPx1a9KxvPm-3" target="IklVNkg57ZsHUNvntp-u-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-24" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="f-m4LPaJYdPx1a9KxvPm-3" target="IklVNkg57ZsHUNvntp-u-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-259" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-259" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint y="11" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-260" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-260" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="136" y="11" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-261" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-261" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="52" y="-4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-262" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-262" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="104" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-263" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-263" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="-14" y="-157" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-264" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-264" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="26" y="-177" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-265" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-265" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="66" y="-167" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-266" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-266" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="116" y="-177" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-267" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-267" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="156" y="-157" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-271" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-271" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="156" y="583" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-272" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-272" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="-24" y="583" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-273" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-273" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="26" y="603" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-274" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-274" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="42WZa0VlCs6O76AgJ4p3-24" vertex="1" connectable="0">
           <mxGeometry x="-0.1671" y="1" relative="1" as="geometry">
             <mxPoint x="116" y="603" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-25" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="f-m4LPaJYdPx1a9KxvPm-4" target="IklVNkg57ZsHUNvntp-u-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-25" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="f-m4LPaJYdPx1a9KxvPm-4" target="IklVNkg57ZsHUNvntp-u-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.729;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="f-m4LPaJYdPx1a9KxvPm-1" target="IklVNkg57ZsHUNvntp-u-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.729;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="f-m4LPaJYdPx1a9KxvPm-1" target="IklVNkg57ZsHUNvntp-u-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-27" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="f-m4LPaJYdPx1a9KxvPm-2" target="IklVNkg57ZsHUNvntp-u-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-27" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="f-m4LPaJYdPx1a9KxvPm-2" target="IklVNkg57ZsHUNvntp-u-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="IklVNkg57ZsHUNvntp-u-1" value="댓글" style="ellipse;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#fad9d5;strokeColor=#ae4132;strokeWidth=2;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
@@ -267,13 +267,13 @@
             <mxPoint x="730" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-21" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Jm0hGLuYt1_iPAxI5Y-y-2" target="eAc8JbtrIRDQ5BVOb8-r-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-21" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Jm0hGLuYt1_iPAxI5Y-y-2" target="eAc8JbtrIRDQ5BVOb8-r-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Jm0hGLuYt1_iPAxI5Y-y-1" target="eAc8JbtrIRDQ5BVOb8-r-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Jm0hGLuYt1_iPAxI5Y-y-1" target="eAc8JbtrIRDQ5BVOb8-r-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-23" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Jm0hGLuYt1_iPAxI5Y-y-3" target="eAc8JbtrIRDQ5BVOb8-r-1" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-23" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="Jm0hGLuYt1_iPAxI5Y-y-3" target="eAc8JbtrIRDQ5BVOb8-r-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="eAc8JbtrIRDQ5BVOb8-r-1" value="&lt;div style=&quot;font-size: 14px;&quot;&gt;글&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#fad9d5;strokeColor=#ae4132;strokeWidth=2;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
@@ -306,7 +306,7 @@
         <mxCell id="huwDGoITAxrcZlBKzeDQ-3" value="답변달기" style="ellipse;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;opacity=40;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
           <mxGeometry x="361.5" y="705" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="huwDGoITAxrcZlBKzeDQ-4" value="CHATGPT 피드백" style="ellipse;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;opacity=40;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
+        <mxCell id="huwDGoITAxrcZlBKzeDQ-4" value="CHATGPT한테&amp;nbsp;&lt;div&gt;피드백받기&lt;/div&gt;" style="ellipse;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;opacity=40;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
           <mxGeometry x="523" y="705" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="huwDGoITAxrcZlBKzeDQ-5" value="BEST&amp;nbsp;&lt;div&gt;답변으로&amp;nbsp;&lt;div&gt;추천하기&lt;/div&gt;&lt;/div&gt;" style="ellipse;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;opacity=40;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
@@ -318,13 +318,13 @@
         <mxCell id="42WZa0VlCs6O76AgJ4p3-12" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.283;entryY=1.049;entryDx=0;entryDy=0;dashed=1;endArrow=classic;endFill=0;entryPerimeter=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="huwDGoITAxrcZlBKzeDQ-8" target="NOhAKVlgrImQNk7xSUPU-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="huwDGoITAxrcZlBKzeDQ-3" target="huwDGoITAxrcZlBKzeDQ-8" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="huwDGoITAxrcZlBKzeDQ-3" target="huwDGoITAxrcZlBKzeDQ-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="huwDGoITAxrcZlBKzeDQ-5" target="huwDGoITAxrcZlBKzeDQ-8" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="huwDGoITAxrcZlBKzeDQ-5" target="huwDGoITAxrcZlBKzeDQ-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="huwDGoITAxrcZlBKzeDQ-4" target="huwDGoITAxrcZlBKzeDQ-8" edge="1">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=1;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;dashed=1;" parent="YGuzLo_X1hFEdo6NRZUu-2" source="huwDGoITAxrcZlBKzeDQ-4" target="huwDGoITAxrcZlBKzeDQ-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="huwDGoITAxrcZlBKzeDQ-8" value="답변" style="ellipse;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1">
@@ -423,32 +423,32 @@
             <mxPoint x="-18" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-151" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-151" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
           <mxGeometry x="430" y="700.0047058823529" as="geometry">
             <mxPoint x="-18" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-154" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-154" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
           <mxGeometry x="560" y="700.0047058823529" as="geometry">
             <mxPoint x="-18" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-155" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-155" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
           <mxGeometry x="490" y="710.0047058823529" as="geometry">
             <mxPoint x="-18" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-156" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-156" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
           <mxGeometry x="562" y="467.00470588235294" as="geometry">
             <mxPoint x="-160" y="-2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-257" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-257" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
           <mxGeometry x="560" y="474.00470588235294" as="geometry">
             <mxPoint x="-18" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="42WZa0VlCs6O76AgJ4p3-258" value="&amp;lt;&amp;lt;일반화&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
+        <mxCell id="42WZa0VlCs6O76AgJ4p3-258" value="&amp;lt;&amp;lt;확장&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="YGuzLo_X1hFEdo6NRZUu-2" vertex="1" connectable="0">
           <mxGeometry x="490" y="490.00470588235294" as="geometry">
             <mxPoint x="-18" y="-8" as="offset" />
           </mxGeometry>
@@ -481,13 +481,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="huwDGoITAxrcZlBKzeDQ-48" value="ChatGPT" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=0;labelBackgroundColor=default;fontSize=21;textShadow=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
-          <mxGeometry x="965" y="209" width="120" height="240" as="geometry" />
+          <mxGeometry x="959" y="590" width="120" height="240" as="geometry" />
         </mxCell>
         <mxCell id="42WZa0VlCs6O76AgJ4p3-34" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0;entryDx=0;entryDy=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" source="42WZa0VlCs6O76AgJ4p3-33" target="huwDGoITAxrcZlBKzeDQ-50" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="42WZa0VlCs6O76AgJ4p3-33" value="관리자" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=0;labelBackgroundColor=default;fontSize=21;textShadow=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
-          <mxGeometry x="965" y="509" width="120" height="240" as="geometry" />
+          <mxGeometry x="954" y="226" width="120" height="240" as="geometry" />
         </mxCell>
         <mxCell id="42WZa0VlCs6O76AgJ4p3-285" value="라운지(커뮤니티)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans Korean;fontSize=16;fontColor=default;labelBackgroundColor=default;fontStyle=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
           <mxGeometry x="190" y="866" width="129" height="30" as="geometry" />
@@ -497,6 +497,48 @@
         </mxCell>
         <mxCell id="42WZa0VlCs6O76AgJ4p3-289" value="마이 페이지" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans Korean;fontSize=16;fontColor=default;labelBackgroundColor=default;fontStyle=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
           <mxGeometry x="190" y="944" width="119" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-1" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=0;labelBackgroundColor=default;fontSize=21;textShadow=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" vertex="1" parent="1">
+          <mxGeometry x="291.47" y="1021" width="20.12" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-2" value="" style="ellipse;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;strokeWidth=2;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" vertex="1" parent="1">
+          <mxGeometry x="368.47" y="1028" width="55.5" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-5" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="456.47" y="1039" as="sourcePoint" />
+            <mxPoint x="536.47" y="1039" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-6" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="562.47" y="1039" as="sourcePoint" />
+            <mxPoint x="642.47" y="1039" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-7" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;dashed=1;endArrow=classic;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="675.47" y="1038" as="sourcePoint" />
+            <mxPoint x="755.47" y="1038" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-9" value="액터" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="271.53" y="1066" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-10" value="유즈케이스" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="342.47" y="1066" width="103" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-11" value="연관관계" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="442.47" y="1066" width="103" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-14" value="확장관계" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="550.47" y="1066" width="103" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-15" value="포함관계" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="663.47" y="1066" width="103" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

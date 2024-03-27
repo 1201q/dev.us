@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-26T00:31:21.091Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Whale/3.25.232.19 Safari/537.36" etag="TFr9wtd2maGK34B7WHuo" version="24.1.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-26T11:14:55.642Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Whale/3.25.232.19 Safari/537.36" etag="nnqJdR2hWM5zHCqsxVe_" version="24.1.0" type="github">
   <diagram id="jTj0nOP97UvRc4CrnVmE" name="페이지-2">
-    <mxGraphModel dx="2995" dy="1498" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2417" dy="1013" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -23,7 +23,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="YGuzLo_X1hFEdo6NRZUu-1" value="회원" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=0;labelBackgroundColor=default;fontSize=21;textShadow=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
+        <mxCell id="YGuzLo_X1hFEdo6NRZUu-1" value="유저" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=0;labelBackgroundColor=default;fontSize=21;textShadow=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
           <mxGeometry x="-57" y="335" width="120" height="240" as="geometry" />
         </mxCell>
         <mxCell id="YGuzLo_X1hFEdo6NRZUu-2" value="" style="swimlane;startSize=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
@@ -498,46 +498,46 @@
         <mxCell id="42WZa0VlCs6O76AgJ4p3-289" value="마이 페이지" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans Korean;fontSize=16;fontColor=default;labelBackgroundColor=default;fontStyle=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
           <mxGeometry x="190" y="944" width="119" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-1" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=0;labelBackgroundColor=default;fontSize=21;textShadow=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" vertex="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-1" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=0;labelBackgroundColor=default;fontSize=21;textShadow=0;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
           <mxGeometry x="291.47" y="1021" width="20.12" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-2" value="" style="ellipse;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;strokeWidth=2;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" vertex="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-2" value="" style="ellipse;html=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelBackgroundColor=default;fontSize=14;strokeWidth=2;fontFamily=Noto Sans Korean;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans%2BKorean;" parent="1" vertex="1">
           <mxGeometry x="368.47" y="1028" width="55.5" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-5" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-5" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="456.47" y="1039" as="sourcePoint" />
             <mxPoint x="536.47" y="1039" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-6" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-6" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;dashed=1;endArrow=block;endFill=1;" parent="1" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="562.47" y="1039" as="sourcePoint" />
             <mxPoint x="642.47" y="1039" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-7" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;dashed=1;endArrow=classic;endFill=0;" edge="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-7" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;dashed=1;endArrow=classic;endFill=0;" parent="1" edge="1">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="675.47" y="1038" as="sourcePoint" />
             <mxPoint x="755.47" y="1038" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-9" value="액터" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-9" value="액터" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="271.53" y="1066" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-10" value="유즈케이스" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-10" value="유즈케이스" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="342.47" y="1066" width="103" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-11" value="연관관계" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-11" value="연관관계" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="442.47" y="1066" width="103" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-14" value="확장관계" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-14" value="확장관계" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="550.47" y="1066" width="103" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZnlRjMAD7vS59IiQbI4J-15" value="포함관계" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="ZnlRjMAD7vS59IiQbI4J-15" value="포함관계" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="663.47" y="1066" width="103" height="30" as="geometry" />
         </mxCell>
       </root>

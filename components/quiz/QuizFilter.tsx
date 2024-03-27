@@ -97,8 +97,9 @@ const QuizFilter = () => {
                   option !== "all"
                 ) {
                   return [...prev, option];
+                } else {
+                  return [];
                 }
-                return prev;
               });
             }}
           />

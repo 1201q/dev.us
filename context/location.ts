@@ -1,5 +1,4 @@
 import { atomWithHash } from "jotai-location";
-import { atom } from "jotai";
 
 export const quizDifficultyOptionsAtom = atomWithHash<string>(
   "difficulty",
@@ -21,5 +20,13 @@ export const quizFieldDetailOptionsAtom = atomWithHash<string>(
 );
 
 export const quizStackOptionsAtom = atomWithHash<string[]>("stack", [], {
+  setHash: "replaceState",
+});
+
+export const searchKeywordAtom = atomWithHash<string>("keyword", "", {
+  setHash: "replaceState",
+});
+
+export const sortOptionAtom = atomWithHash<string>("sort", "", {
   setHash: "replaceState",
 });

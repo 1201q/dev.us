@@ -105,6 +105,7 @@ const LoginBtn = styled.button`
   font-weight: 600;
   border: none;
   background-color: ${(props) => props.theme.color.bg_black};
+
   color: white;
   border-radius: 8px;
   cursor: pointer;

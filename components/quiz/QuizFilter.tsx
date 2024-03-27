@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { techField, techStack } from "@/constants/options";
 import { IconX } from "@/public/svgs";
+
 import { useAtom } from "jotai";
 import {
   quizDifficultyOptionsAtom,
@@ -9,6 +10,8 @@ import {
   quizStackOptionsAtom,
 } from "@/context/location";
 import { useEffect, useState } from "react";
+import SelectOption from "../shared/select-option/SelectOption";
+import SearchInput from "../shared/search-input/SearchInput";
 
 const QuizFilter = () => {
   const [initRender, setInitRender] = useState(false);
@@ -36,7 +39,13 @@ const QuizFilter = () => {
 
   const Stack = (option: any) => {
     return (
-      <StackItem>
+      <StackItem
+        onClick={() => {
+          setSelectStackOption((prev) => {
+            return prev.filter((o) => o !== option);
+          });
+        }}
+      >
         <p>{techStack.find((o) => o.option === option)?.name}</p>
         <IconX width={8} height={8} />
       </StackItem>
@@ -47,91 +56,59 @@ const QuizFilter = () => {
     setInitRender(true);
   }, []);
 
-  console.log(selectStackOptions);
-
   return (
     <>
       {initRender && (
         <Container>
           <InfoHeaderText>검색</InfoHeaderText>
-          <Input as="input" type="text" placeholder="키워드 검색" />
+          <SearchInput />
           <InfoHeaderText>분야</InfoHeaderText>
-          <SortBtn
-            key={"field-option"}
-            onChange={(e) => {
-              const { value } = e.target;
-              setSelectFieldOption(value);
+          <SelectOption
+            selectOption={selectFieldOption}
+            options={fieldOptions}
+            onSelectOption={(option) => {
+              setSelectFieldOption(option);
             }}
-            value={selectFieldOption}
-          >
-            <option key="field-all" value="all">
-              전체
-            </option>
-            {fieldOptions.map((o) => (
-              <option key={o.name} value={o.option}>
-                {o.name}
-              </option>
-            ))}
-          </SortBtn>
+          />
           <InfoHeaderText>난이도순</InfoHeaderText>
-          <SortBtn
-            key={"difficulty-option"}
-            onChange={(e) => {
-              const { value } = e.target;
-              setSelectDifficultyOption(value);
+          <SelectOption
+            selectOption={selectDifficultyOption}
+            options={difficultyOptions}
+            onSelectOption={(option) => {
+              setSelectDifficultyOption(option);
             }}
-            value={selectDifficultyOption}
-          >
-            <option key="difficulty-all" value={"all"}>
-              전체
-            </option>
-            {difficultyOptions.map((o) => (
-              <option key={o.name} value={o.option}>
-                {o.name}
-              </option>
-            ))}
-          </SortBtn>
+          />
           <InfoHeaderText>분야 상세</InfoHeaderText>
-          <SortBtn
-            key="fieldDetail-all"
-            onChange={(e) => {
-              const { value } = e.target;
-              setSelectFieldDetailOption(value);
+          <SelectOption
+            selectOption={selectFieldDetailOption}
+            options={techField}
+            onSelectOption={(option) => {
+              setSelectFieldDetailOption(option);
             }}
-            value={selectFieldDetailOption}
-          >
-            <option key="fieldDetail-all" value={"all"}>
-              전체
-            </option>
-            {techField.map((o, i) => (
-              <option key={o.option} value={o.option}>
-                {o.name}
-              </option>
-            ))}
-          </SortBtn>
+          />
           <InfoHeaderText>기술스택 상세</InfoHeaderText>
-          <SortBtn
-            key="stack"
-            onChange={(e) => {
-              const { value } = e.target;
-              setSelectStackOption((prev) => [...prev, value]);
+          <SelectOption
+            fixedDisplayOption={"기술스택을 선택해주세요"}
+            options={techStack}
+            onSelectOption={(option) => {
+              setSelectStackOption((prev) => {
+                if (
+                  prev.findIndex((o) => o === option) === -1 &&
+                  option !== "all"
+                ) {
+                  return [...prev, option];
+                }
+                return prev;
+              });
             }}
-            value={"all"}
-          >
-            <option key="fieldDetail-all" value={"all"}>
-              스택을 선택하세요
-            </option>
-            {techStack.map((o, i) => (
-              <option key={o.option} value={o.option}>
-                {o.name}
-              </option>
-            ))}
-          </SortBtn>
-          <StackContainer>
-            {selectStackOptions.map((o, i) => {
-              return Stack(o);
-            })}
-          </StackContainer>
+          />
+          {selectStackOptions.length >= 1 && (
+            <StackContainer>
+              {selectStackOptions.map((o) => {
+                if (techStack.find((to) => to.option === o)) return Stack(o);
+              })}
+            </StackContainer>
+          )}
         </Container>
       )}
     </>
@@ -141,7 +118,7 @@ const QuizFilter = () => {
 const Container = styled.div`
   position: sticky;
   top: 20px;
-  padding: 20px 20px;
+  padding: 0px 20px 25px 20px;
   background-color: white;
   border: 1px solid rgb(215, 226, 235);
   border-radius: 10px;
@@ -160,32 +137,7 @@ const InfoHeaderText = styled.p`
   font-size: 14px;
   color: ${(props) => props.theme.color.f_lightGray};
   margin-bottom: 7px;
-`;
-
-const SortBtn = styled.select`
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 30px;
-  padding: 0px 5px 0px 10px;
-  border-radius: 7px;
-  border: ${(props) => `1px solid ${props.theme.color.border_gray}`};
-  cursor: pointer;
-  background-color: ${(props) => props.theme.color.bg_lightGray};
-  margin-bottom: 20px;
-
-  p {
-    font-size: 14px;
-    font-weight: 500;
-  }
-`;
-
-const Input = styled(SortBtn)`
-  width: calc(100% - 12px);
-  padding: 0;
-  cursor: auto;
-  padding-left: 10px;
+  margin-top: 20px;
 `;
 
 const StackContainer = styled.div`
@@ -198,6 +150,7 @@ const StackContainer = styled.div`
   max-height: 100%;
 
   overflow-y: scroll;
+  margin-top: 15px;
 `;
 
 const StackItem = styled.div`

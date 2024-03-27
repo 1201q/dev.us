@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import TeamItem from "./TeamItem";
+import SelectOption from "../shared/select-option/SelectOption";
+import { useAtom } from "jotai";
+import { sortOptionAtom } from "@/context/location";
 
 const TeamList = () => {
   const mockData = [
@@ -25,14 +28,24 @@ const TeamList = () => {
     "[AOS] 사이드 프로젝트 진짜 출시까지 해볼 안드로이드 개발자 모시고 있습니다.",
     "'내 꿀팁과 이야기로 만드는 부수입, 비법거래소' React 개발자 창업맴버 모집합니다.",
   ];
+  const sortOptions = [
+    { name: "최신순", option: "latest" },
+    { name: "마감임박순", option: "deadline" },
+  ];
+  const [sortOption, setSortOption] = useAtom(sortOptionAtom);
+
   return (
     <Container>
       <ListHeader>
         <p>현재 모집 중인 리스트</p>
-        <SortBtn>
-          <option>최신순</option>
-          <option>마감임박순</option>
-        </SortBtn>
+        <div style={{ width: "100px" }}>
+          <SelectOption
+            options={sortOptions}
+            selectOption={sortOption}
+            onSelectOption={(option) => setSortOption(option)}
+            includeAll={false}
+          />
+        </div>
       </ListHeader>
       <ListContainer>
         {mockData.map((data, index) => (

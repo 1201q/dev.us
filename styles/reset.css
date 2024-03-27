@@ -133,3 +133,9 @@ input {
   border: 0;
   outline: none;
 }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

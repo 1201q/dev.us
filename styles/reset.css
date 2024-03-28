@@ -134,6 +134,15 @@ input {
   outline: none;
 }
 
+button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;

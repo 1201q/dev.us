@@ -10,7 +10,7 @@ import {
   quizStackOptionsAtom,
 } from "@/context/location";
 import { useEffect, useState } from "react";
-import SelectOption from "../shared/select-option/SelectOption";
+import SelectOption from "../shared/dropdown/SelectOption";
 import SearchInput from "../shared/search-input/SearchInput";
 
 const QuizFilter = () => {

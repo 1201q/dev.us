@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import TeamItem from "./TeamItem";
-import SelectOption from "../shared/select-option/SelectOption";
+import SelectOption from "../shared/dropdown/SelectOption";
 import { useAtom } from "jotai";
 import { sortOptionAtom } from "@/context/location";
+import { teamFilterHeaderVisibleAtom } from "@/context/atom";
 
 const TeamList = () => {
   const mockData = [
@@ -33,19 +34,26 @@ const TeamList = () => {
     { name: "마감임박순", option: "deadline" },
   ];
   const [sortOption, setSortOption] = useAtom(sortOptionAtom);
+  const [, setFilterVisible] = useAtom(teamFilterHeaderVisibleAtom);
 
   return (
     <Container>
       <ListHeader>
-        <p>현재 모집 중인 리스트</p>
-        <div style={{ width: "100px" }}>
-          <SelectOption
-            options={sortOptions}
-            selectOption={sortOption}
-            onSelectOption={(option) => setSortOption(option)}
-            includeAll={false}
-          />
-        </div>
+        <p>모집중인 모임 리스트</p>
+
+        <FilterContainer>
+          <FilterBtn onClick={() => setFilterVisible((prev) => !prev)}>
+            필터링
+          </FilterBtn>
+          <div style={{ width: "95px", height: "32px" }}>
+            <SelectOption
+              options={sortOptions}
+              selectOption={sortOption}
+              onSelectOption={(option) => setSortOption(option)}
+              includeAll={false}
+            />
+          </div>
+        </FilterContainer>
       </ListHeader>
       <ListContainer>
         {mockData.map((data, index) => (
@@ -73,21 +81,27 @@ const ListHeader = styled.div`
   }
 `;
 
-const SortBtn = styled.select`
-  position: relative;
+const FilterContainer = styled.div`
   display: flex;
   align-items: center;
-  width: auto;
-  height: 30px;
-  padding: 0px 5px 0px 10px;
-  border-radius: 7px;
-  border: ${(props) => `1px solid ${props.theme.color.border_gray}`};
-  cursor: pointer;
-  background-color: white;
+`;
 
-  p {
-    font-size: 14px;
-    font-weight: 500;
+const FilterBtn = styled.button`
+  min-width: 60px;
+  height: 32px;
+  border-radius: 7px;
+  margin-right: 10px;
+  margin-top: 0px;
+  background-color: ${(props) => props.theme.color.bg_mint};
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+
+  svg {
+    width: 13px;
+    height: 13px;
+    fill: white;
+    margin-left: 5px;
   }
 `;
 

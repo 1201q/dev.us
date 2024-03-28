@@ -84,7 +84,7 @@ const Container = styled.ul`
 const Option = styled.li`
   display: flex;
   align-items: center;
-  height: 32px;
+  height: 35px;
   font-size: 13px;
   font-weight: 500;
   padding: 0px 10px;

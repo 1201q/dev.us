@@ -1,6 +1,6 @@
-import { SetAtom } from "jotai/react/useAtom";
 import { RESET } from "jotai/utils";
 
+export type SetAtom<Args extends any[], Result> = (...args: Args) => Result;
 export type SetStateActionWithReset<Value> =
   | Value
   | typeof RESET

@@ -38,7 +38,7 @@ const StackOption = ({
   };
 
   const onRemoveOption = (option: string, set: SetHashAtom<string[]>) => {
-    set((prev) => {
+    set((prev: string[]) => {
       return prev.filter((o) => o !== option);
     });
   };

@@ -4,7 +4,7 @@ export default function useMenuSelect(
   option: string,
   set: SetHashAtom<string[]>
 ) {
-  set((prev) => {
+  set((prev: string[]) => {
     if (prev.findIndex((o) => o === option) === -1 && option !== "all") {
       return [...prev, option];
     } else if (option === "all") {

@@ -30,4 +30,7 @@ export const theme = {
     f_lightGray: "#98a8b9",
     border_gray: "rgb(215, 226, 235)",
   },
-};
+} as const;
+
+export type themeType = typeof theme;
+export type colorThemeKeyType = keyof (typeof theme)["color"];

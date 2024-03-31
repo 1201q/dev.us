@@ -4,6 +4,7 @@ import SelectOption from "../shared/dropdown/SelectOption";
 import { useAtom } from "jotai";
 import { sortOptionAtom } from "@/context/location";
 import { teamFilterHeaderVisibleAtom } from "@/context/atom";
+import { teamSort } from "@/constants/options";
 
 const TeamList = () => {
   const mockData = [
@@ -29,10 +30,7 @@ const TeamList = () => {
     "[AOS] 사이드 프로젝트 진짜 출시까지 해볼 안드로이드 개발자 모시고 있습니다.",
     "'내 꿀팁과 이야기로 만드는 부수입, 비법거래소' React 개발자 창업맴버 모집합니다.",
   ];
-  const sortOptions = [
-    { name: "최신순", option: "latest" },
-    { name: "마감임박순", option: "deadline" },
-  ];
+
   const [sortOption, setSortOption] = useAtom(sortOptionAtom);
   const [, setFilterVisible] = useAtom(teamFilterHeaderVisibleAtom);
 
@@ -47,9 +45,9 @@ const TeamList = () => {
           </FilterBtn>
           <div style={{ width: "95px", height: "32px" }}>
             <SelectOption
-              options={sortOptions}
+              options={teamSort}
               selectOption={sortOption}
-              onSelectOption={(option) => setSortOption(option)}
+              onSelect={(option) => setSortOption(option)}
               includeAll={false}
             />
           </div>
@@ -65,7 +63,7 @@ const TeamList = () => {
 };
 
 const Container = styled.div`
-  margin-top: 30px;
+  margin-top: 20px;
   padding-bottom: 50px;
 `;
 

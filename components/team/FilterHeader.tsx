@@ -1,11 +1,19 @@
-import { techField, techStack } from "@/constants/options";
-import { useState, useEffect, Dispatch, SetStateAction } from "react";
+import { teamType, techField, techStack } from "@/constants/options";
+import { useState } from "react";
 import styled from "styled-components";
 import useSrcollTrigger from "./hooks/useScrollTrigger";
 import { IconX } from "@/public/svgs";
 import { useAtom } from "jotai";
 import { teamFilterHeaderVisibleAtom } from "@/context/atom";
 import SelectOption from "../shared/dropdown/SelectOption";
+import SearchInput from "../shared/search-input/SearchInput";
+import StackOption from "../shared/stacked-option/StackOption";
+import {
+  quizFieldDetailOptionsAtom,
+  quizStackOptionsAtom,
+  teamTypeOptionsAtom,
+} from "@/context/location";
+import useMenuSelect from "../shared/dropdown/hooks/useMenuSelect";
 
 const FilterHeader = () => {
   const [borderVisible, setBorderVisible] = useState(false);
@@ -17,11 +25,13 @@ const FilterHeader = () => {
     setBorderVisible(scroll);
   });
 
-  const teamTypeOptions = [
-    { name: "사이드프로젝트", option: "project" },
-    { name: "스터디", option: "study" },
-    { name: "대회/공모전", option: "competition" },
-  ];
+  const [selectFieldDetailOption, setSelectFieldDetailOption] = useAtom(
+    quizFieldDetailOptionsAtom
+  );
+  const [selectStackOptions, setSelectStackOption] =
+    useAtom(quizStackOptionsAtom);
+  const [selectTeamTypeOptions, setSelectTeamTypeOptions] =
+    useAtom(teamTypeOptionsAtom);
 
   return (
     <Container borderVisible={borderVisible}>
@@ -33,37 +43,77 @@ const FilterHeader = () => {
       </MobileHeader>
       <OptionContainer>
         <div>
+          <InfoHeaderText>검색</InfoHeaderText>
+          <SearchInput />
+        </div>
+        <div>
           <InfoHeaderText>기술스택</InfoHeaderText>
           <SelectOption
+            fixedDisplayOption={"기술스택을 선택해주세요"}
             options={techStack}
-            selectOption="all"
-            onSelectOption={() => {
-              console.log(1);
-            }}
+            onSelect={(o) => useMenuSelect(o, setSelectStackOption)}
           />
         </div>
         <div>
           <InfoHeaderText>모집분야</InfoHeaderText>
           <SelectOption
+            fixedDisplayOption={"모집 분야를 선택해주세요"}
             options={techField}
-            selectOption="all"
-            onSelectOption={() => {
-              console.log(1);
-            }}
-          />{" "}
+            onSelect={(o) => useMenuSelect(o, setSelectFieldDetailOption)}
+          />
         </div>
         <div>
           <InfoHeaderText>모임종류</InfoHeaderText>
           <SelectOption
-            options={teamTypeOptions}
-            selectOption="all"
-            onSelectOption={() => {
-              console.log(1);
-            }}
+            fixedDisplayOption={"종류를 선택해주세요"}
+            options={teamType}
+            onSelect={(o) => useMenuSelect(o, setSelectTeamTypeOptions)}
           />
         </div>
       </OptionContainer>
-      <StackContainer></StackContainer>
+      <StackContainer>
+        <>
+          {selectStackOptions.map((o) => {
+            if (techStack.find((to) => to.option === o))
+              return (
+                <StackOption
+                  key={o}
+                  setAtom={setSelectStackOption}
+                  option={o}
+                  options={techStack}
+                />
+              );
+          })}
+        </>
+        <>
+          {selectFieldDetailOption.map((o) => {
+            if (techField.find((to) => to.option === o))
+              return (
+                <StackOption
+                  key={o}
+                  setAtom={setSelectFieldDetailOption}
+                  option={o}
+                  options={techField}
+                  optionType="green"
+                />
+              );
+          })}
+        </>
+        <>
+          {selectTeamTypeOptions.map((o) => {
+            if (teamType.find((to) => to.option === o))
+              return (
+                <StackOption
+                  key={o}
+                  setAtom={setSelectTeamTypeOptions}
+                  option={o}
+                  options={teamType}
+                  optionType="red"
+                />
+              );
+          })}
+        </>
+      </StackContainer>
     </Container>
   );
 };
@@ -122,7 +172,7 @@ const MobileHeader = styled.div`
 const OptionContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 15px;
   row-gap: 20px;
 
@@ -133,8 +183,20 @@ const OptionContainer = styled.div`
 `;
 
 const StackContainer = styled.div`
-  margin-top: 10px;
-  min-height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 7px;
+  row-gap: 7px;
+
+  height: min-content;
+  max-height: 100%;
+
+  overflow-y: scroll;
+  margin-top: 15px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 25px;
+  }
 `;
 
 const InfoHeaderText = styled.p`

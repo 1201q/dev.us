@@ -21,7 +21,7 @@ const LoungeList = () => {
 };
 
 const Container = styled.div`
-  margin-top: 30px;
+  margin-top: 20px;
   padding-bottom: 50px;
 `;
 
@@ -29,7 +29,8 @@ const ListHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  height: 32px;
 
   p {
     font-size: 22px;

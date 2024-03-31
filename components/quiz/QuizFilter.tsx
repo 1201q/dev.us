@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import { techField, techStack } from "@/constants/options";
-import { IconX } from "@/public/svgs";
-
+import {
+  techField,
+  techStack,
+  quizDifficulty,
+  quizField,
+} from "@/constants/options";
 import { useAtom } from "jotai";
 import {
   quizDifficultyOptionsAtom,
@@ -9,12 +12,13 @@ import {
   quizFieldDetailOptionsAtom,
   quizStackOptionsAtom,
 } from "@/context/location";
-import { useEffect, useState } from "react";
+
 import SelectOption from "../shared/dropdown/SelectOption";
 import SearchInput from "../shared/search-input/SearchInput";
+import StackOption from "../shared/stacked-option/StackOption";
+import useMenuSelect from "../shared/dropdown/hooks/useMenuSelect";
 
 const QuizFilter = () => {
-  const [initRender, setInitRender] = useState(false);
   const [selectFieldOption, setSelectFieldOption] =
     useAtom(quizFieldOptionsAtom);
   const [selectDifficultyOption, setSelectDifficultyOption] = useAtom(
@@ -26,100 +30,100 @@ const QuizFilter = () => {
   const [selectStackOptions, setSelectStackOption] =
     useAtom(quizStackOptionsAtom);
 
-  const fieldOptions = [
-    { name: "경험", option: "experience" },
-    { name: "CS지식", option: "cs" },
-    { name: "기술스택", option: "stack" },
-  ];
-  const difficultyOptions = [
-    { name: "쉬움", option: "1" },
-    { name: "중간", option: "2" },
-    { name: "어려움", option: "3" },
-  ];
-
-  const Stack = (option: any) => {
-    return (
-      <StackItem
-        onClick={() => {
-          setSelectStackOption((prev) => {
-            return prev.filter((o) => o !== option);
-          });
-        }}
-      >
-        <p>{techStack.find((o) => o.option === option)?.name}</p>
-        <IconX width={8} height={8} />
-      </StackItem>
-    );
-  };
-
-  useEffect(() => {
-    setInitRender(true);
-  }, []);
-
   return (
-    <>
-      {initRender && (
-        <Container>
-          <InfoHeaderText>검색</InfoHeaderText>
-          <SearchInput />
-          <InfoHeaderText>분야</InfoHeaderText>
-          <SelectOption
-            selectOption={selectFieldOption}
-            options={fieldOptions}
-            onSelectOption={(option) => {
-              setSelectFieldOption(option);
-            }}
-          />
-          <InfoHeaderText>난이도순</InfoHeaderText>
-          <SelectOption
-            selectOption={selectDifficultyOption}
-            options={difficultyOptions}
-            onSelectOption={(option) => {
-              setSelectDifficultyOption(option);
-            }}
-          />
-          <InfoHeaderText>분야 상세</InfoHeaderText>
-          <SelectOption
-            selectOption={selectFieldDetailOption}
-            options={techField}
-            onSelectOption={(option) => {
-              setSelectFieldDetailOption(option);
-            }}
-          />
-          <InfoHeaderText>기술스택 상세</InfoHeaderText>
-          <SelectOption
-            fixedDisplayOption={"기술스택을 선택해주세요"}
-            options={techStack}
-            onSelectOption={(option) => {
-              setSelectStackOption((prev) => {
-                if (
-                  prev.findIndex((o) => o === option) === -1 &&
-                  option !== "all"
-                ) {
-                  return [...prev, option];
-                } else {
-                  return [];
-                }
-              });
-            }}
-          />
-          {selectStackOptions.length >= 1 && (
-            <StackContainer>
-              {selectStackOptions.map((o) => {
-                if (techStack.find((to) => to.option === o)) return Stack(o);
-              })}
-            </StackContainer>
-          )}
-        </Container>
-      )}
-    </>
+    <Container>
+      <InfoHeaderText>검색</InfoHeaderText>
+      <SearchInput />
+      <InfoHeaderText>분야</InfoHeaderText>
+      <SelectOption
+        fixedDisplayOption={"분야를 선택해주세요"}
+        options={quizField}
+        onSelect={(o) => useMenuSelect(o, setSelectFieldOption)}
+      />
+      <InfoHeaderText>난이도순</InfoHeaderText>
+      <SelectOption
+        fixedDisplayOption={"난이도를 선택해주세요"}
+        options={quizDifficulty}
+        onSelect={(o) => useMenuSelect(o, setSelectDifficultyOption)}
+      />
+      <InfoHeaderText>분야 상세</InfoHeaderText>
+      <SelectOption
+        fixedDisplayOption={"분야를 선택해주세요"}
+        options={techField}
+        onSelect={(o) => useMenuSelect(o, setSelectFieldDetailOption)}
+      />
+      <InfoHeaderText>기술스택 상세</InfoHeaderText>
+      <SelectOption
+        fixedDisplayOption={"기술스택을 선택해주세요"}
+        options={techStack}
+        onSelect={(o) => useMenuSelect(o, setSelectStackOption)}
+      />
+
+      <StackContainer>
+        <>
+          {selectFieldOption?.map((o) => {
+            if (quizField.find((to) => to.option === o))
+              return (
+                <StackOption
+                  key={o}
+                  setAtom={setSelectFieldOption}
+                  option={o}
+                  options={quizField}
+                  optionType="blue"
+                />
+              );
+          })}
+        </>
+        <>
+          {selectDifficultyOption?.map((o) => {
+            if (quizDifficulty.find((to) => to.option === o))
+              return (
+                <StackOption
+                  key={o}
+                  setAtom={setSelectDifficultyOption}
+                  option={o}
+                  options={quizDifficulty}
+                  optionType="red"
+                />
+              );
+          })}
+        </>
+        <>
+          {selectFieldDetailOption?.map((o) => {
+            if (techField.find((to) => to.option === o))
+              return (
+                <StackOption
+                  key={o}
+                  setAtom={setSelectFieldDetailOption}
+                  option={o}
+                  options={techField}
+                  optionType="green"
+                />
+              );
+          })}
+        </>
+        <>
+          {selectStackOptions?.map((o) => {
+            if (techStack.find((to) => to.option === o))
+              return (
+                <StackOption
+                  key={o}
+                  setAtom={setSelectStackOption}
+                  option={o}
+                  options={techStack}
+                />
+              );
+          })}
+        </>
+      </StackContainer>
+    </Container>
   );
 };
 
 const Container = styled.div`
   position: sticky;
   top: 20px;
-  padding: 0px 20px 25px 20px;
+  padding: 0px 20px 20px 20px;
   background-color: white;
   border: 1px solid rgb(215, 226, 235);
   border-radius: 10px;
@@ -144,37 +148,14 @@ const InfoHeaderText = styled.p`
 const StackContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 7px;
+  row-gap: 7px;
 
   height: min-content;
   max-height: 100%;
 
   overflow-y: scroll;
   margin-top: 15px;
-`;
-
-const StackItem = styled.div`
-  display: flex;
-  align-items: center;
-  width: max-content;
-  padding: 5px 8px;
-
-  background-color: #e9ecf3;
-
-  border-radius: 5px;
-  cursor: pointer;
-
-  p {
-    color: #44576c;
-    font-size: 13px;
-    font-weight: 500;
-    margin-right: 5px;
-  }
-
-  svg {
-    fill: #44576c;
-  }
 `;
 
 export default QuizFilter;

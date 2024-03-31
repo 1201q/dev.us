@@ -1,19 +1,19 @@
 import { atomWithHash } from "jotai-location";
 
-export const quizDifficultyOptionsAtom = atomWithHash<string>(
+export const quizDifficultyOptionsAtom = atomWithHash<string[]>(
   "difficulty",
-  "",
+  [],
   {
     setHash: "replaceState",
   }
 );
-export const quizFieldOptionsAtom = atomWithHash<string>("field", "", {
+export const quizFieldOptionsAtom = atomWithHash<string[]>("field", [], {
   setHash: "replaceState",
 });
 
-export const quizFieldDetailOptionsAtom = atomWithHash<string>(
+export const quizFieldDetailOptionsAtom = atomWithHash<string[]>(
   "fieldDetail",
-  "",
+  [],
   {
     setHash: "replaceState",
   }
@@ -24,6 +24,10 @@ export const quizStackOptionsAtom = atomWithHash<string[]>("stack", [], {
 });
 
 export const searchKeywordAtom = atomWithHash<string>("keyword", "", {
+  setHash: "replaceState",
+});
+
+export const teamTypeOptionsAtom = atomWithHash<string[]>("teamType", [], {
   setHash: "replaceState",
 });
 

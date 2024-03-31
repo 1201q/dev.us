@@ -11,10 +11,11 @@ const QuizList = () => {
 };
 
 const ListHeader = styled.div`
+  height: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   p {
     font-size: 22px;

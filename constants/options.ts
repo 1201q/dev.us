@@ -45,3 +45,25 @@ export const techStack = [
   { name: "Zeplin", option: "zeplin" },
   { name: "Jest", option: "jest" },
 ];
+
+export const quizField = [
+  { name: "경험", option: "experience" },
+  { name: "CS지식", option: "cs" },
+  { name: "기술스택", option: "stack" },
+];
+export const quizDifficulty = [
+  { name: "쉬움", option: "1" },
+  { name: "중간", option: "2" },
+  { name: "어려움", option: "3" },
+];
+
+export const teamSort = [
+  { name: "최신순", option: "latest" },
+  { name: "마감임박순", option: "deadline" },
+];
+
+export const teamType = [
+  { name: "사이드프로젝트", option: "project" },
+  { name: "스터디", option: "study" },
+  { name: "대회/공모전", option: "competition" },
+];

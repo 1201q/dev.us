@@ -10,32 +10,16 @@ interface OptionsType {
 interface PropsType {
   includeAll: boolean;
   options: OptionsType[];
-  onSelectOption: (option: string) => void;
+  onSelect: (option: string) => void;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const Options = ({
-  options,
-  onSelectOption,
-  setIsOpen,
-  includeAll,
-}: PropsType) => {
+const Menu = ({ options, onSelect, setIsOpen, includeAll }: PropsType) => {
   const selectRef = useRef<HTMLUListElement | null>(null);
 
   useOutSideClick([selectRef], () => {
     setIsOpen(false);
   });
-
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log(window.scrollY);
-    };
-    console.log(selectRef.current && selectRef.current.getBoundingClientRect());
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <Container ref={selectRef}>
@@ -43,7 +27,7 @@ const Options = ({
         <Option
           key={"all"}
           onClick={() => {
-            onSelectOption("all");
+            onSelect("all");
             setIsOpen(false);
           }}
         >
@@ -54,7 +38,7 @@ const Options = ({
         <Option
           key={o.name}
           onClick={() => {
-            onSelectOption(o.option);
+            onSelect(o.option);
             setIsOpen(false);
           }}
         >
@@ -98,4 +82,4 @@ const Option = styled.li`
   }
 `;
 
-export default Options;
+export default Menu;

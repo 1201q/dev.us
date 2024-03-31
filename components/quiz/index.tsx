@@ -12,7 +12,7 @@ const QuizPage = () => {
 };
 
 const Container = styled.div`
-  margin-top: 30px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 7fr 3fr;
   column-gap: 30px;

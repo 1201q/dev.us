@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-import Options from "./Options";
+import Menu from "./Menu";
 import { IconDown } from "@/public/svgs";
 import { selectStyles, unSelectStyles } from "@/styles/shared";
 
@@ -12,19 +12,20 @@ interface OptionsType {
 interface PropsType {
   selectOption?: string;
   options: OptionsType[];
-  onSelectOption: (option: string) => void;
+  onSelect: (option: string) => void;
   includeAll?: boolean;
   fixedDisplayOption?: string;
 }
 
 const SelectOption = ({
   options,
-  onSelectOption,
+  onSelect,
   selectOption,
   includeAll = true,
   fixedDisplayOption,
 }: PropsType) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [initRender, setInitRender] = useState(false);
   const validOption = options.find((o) => o.option === selectOption)?.name;
 
   const getDisplayOptionName = () => {
@@ -39,18 +40,22 @@ const SelectOption = ({
 
   const name = getDisplayOptionName();
 
+  useEffect(() => {
+    setInitRender(true);
+  }, []);
+
   return (
     <Container>
       <SelectContainer onClick={() => setIsOpen(true)} isOpen={isOpen}>
-        {name}
+        {initRender && name}
         <IconDown />
       </SelectContainer>
       {isOpen && (
-        <Options
+        <Menu
           includeAll={includeAll}
           setIsOpen={setIsOpen}
           options={options}
-          onSelectOption={onSelectOption}
+          onSelect={onSelect}
         />
       )}
     </Container>

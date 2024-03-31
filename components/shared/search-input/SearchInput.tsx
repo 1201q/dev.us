@@ -62,7 +62,6 @@ const FormContainer = styled.form<{ isfocus: boolean }>`
   border-radius: 7px;
 
   cursor: pointer;
-  margin-bottom: 20px;
 
   ${(props) => (props.isfocus ? selectStyles : unSelectStyles)}
 `;

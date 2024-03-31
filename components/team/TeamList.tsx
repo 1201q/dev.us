@@ -37,7 +37,7 @@ const TeamList = () => {
   return (
     <Container>
       <ListHeader>
-        <p>모집중인 모임 리스트</p>
+        <p>모임 리스트</p>
 
         <FilterContainer>
           <FilterBtn onClick={() => setFilterVisible((prev) => !prev)}>

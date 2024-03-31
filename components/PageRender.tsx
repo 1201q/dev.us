@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Header from "./Header";
+import Header from "./shared/header/Header";
 import TeamPage from "./team";
 import LoungePage from "./lounge";
 import FilterHeader from "./team/FilterHeader";
@@ -21,6 +21,7 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
     <Container>
       <p style={{ position: "fixed", bottom: 0, zIndex: 200 }}>{props?.uid}</p>
       <Header url={props.url} />
+
       {props.url === "/team" && teamFilterHeaderVisible && <FilterHeader />}
       <Contents>
         {props.url === "/team" && <TeamPage />}

@@ -51,7 +51,7 @@ const Menu = ({ options, onSelect, setIsOpen, includeAll }: PropsType) => {
 
 const Container = styled.ul`
   width: 100%;
-  max-height: 440px;
+  max-height: 460px;
   position: absolute;
   left: 0;
   top: 40px;

@@ -23,7 +23,7 @@ const Container = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 `;
 

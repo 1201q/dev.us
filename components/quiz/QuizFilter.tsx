@@ -17,6 +17,8 @@ import SelectOption from "../shared/dropdown/SelectOption";
 import SearchInput from "../shared/search-input/SearchInput";
 import StackOption from "../shared/stacked-option/StackOption";
 import useMenuSelect from "../shared/dropdown/hooks/useMenuSelect";
+import { IconX } from "@/public/svgs";
+import { quizFilterVisibleAtom } from "@/context/atom";
 
 const QuizFilter = () => {
   const [selectFieldOption, setSelectFieldOption] =
@@ -30,8 +32,18 @@ const QuizFilter = () => {
   const [selectStackOptions, setSelectStackOption] =
     useAtom(quizStackOptionsAtom);
 
+  const [quizFilterVisible, setQuizFilterVisible] = useAtom(
+    quizFilterVisibleAtom
+  );
+
   return (
-    <Container>
+    <Container visible={quizFilterVisible}>
+      <MobileHeader>
+        <HeaderText>필터링</HeaderText>
+        <button onClick={() => setQuizFilterVisible(false)}>
+          <IconX />
+        </button>
+      </MobileHeader>
       <InfoHeaderText>검색</InfoHeaderText>
       <SearchInput />
       <InfoHeaderText>분야</InfoHeaderText>
@@ -120,7 +132,7 @@ const QuizFilter = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.div<{ visible: boolean }>`
   position: sticky;
   top: 20px;
   padding: 0px 20px 20px 20px;
@@ -128,13 +140,17 @@ const Container = styled.div`
   border: 1px solid rgb(215, 226, 235);
   border-radius: 10px;
   height: min-content;
+  z-index: 100;
 
   @media screen and (max-width: 768px) {
-    position: relative;
-    top: 0px;
-    padding: 0px 0px;
-
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
     border: none;
+
+    display: ${(props) => (props.visible ? "" : " none")};
   }
 `;
 
@@ -156,6 +172,40 @@ const StackContainer = styled.div`
 
   overflow-y: scroll;
   margin-top: 15px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 25px;
+  }
+`;
+
+const MobileHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-top: 10px;
+
+  button {
+    width: 30px;
+    height: 30px;
+
+    margin-top: 20px;
+    margin-right: 5px;
+  }
+
+  svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+const HeaderText = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
 `;
 
 export default QuizFilter;

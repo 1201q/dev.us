@@ -9,6 +9,10 @@ import QuizPage from "./quiz";
 
 import { useAtomValue } from "jotai";
 import { teamFilterHeaderVisibleAtom } from "@/context/atom";
+import AuthPage from "./auth";
+import { AnimatePresence } from "framer-motion";
+import { signOut } from "firebase/auth";
+import { authService } from "@/utils/firebase/client";
 
 interface PageRenderProps {
   props?: any;
@@ -20,8 +24,22 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
   return (
     <Container>
       <p style={{ position: "fixed", bottom: 0, zIndex: 200 }}>{props?.uid}</p>
+      {props?.uid && (
+        <button
+          onClick={async () => await signOut(authService)}
+          style={{
+            position: "fixed",
+            bottom: 10,
+            right: 10,
+            zIndex: 200,
+            backgroundColor: "gray",
+            padding: 10,
+          }}
+        >
+          로그아웃
+        </button>
+      )}
       <Header url={props.url} />
-
       {props.url === "/team" && teamFilterHeaderVisible && <FilterHeader />}
       <Contents>
         {props.url === "/team" && <TeamPage />}
@@ -33,6 +51,9 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
           <LoungeDetailPage id={props.url.split("/")[2]} />
         )}
         {props.url.split("/")[1] === "quiz" && <QuizPage />}
+
+        {props.url === "/auth/login" && <AuthPage mode="login" />}
+        {props.url === "/auth/signup" && <AuthPage mode="signup" />}
       </Contents>
     </Container>
   );

@@ -8,6 +8,8 @@ import IconComment from "./comment.svg";
 import IconReply from "./reply.svg";
 import IconX from "./x.svg";
 import IconFilter from "./filter.svg";
+import IconGoogle from "./google.svg";
+import IconGithub from "./github.svg";
 
 export {
   IconMenu,
@@ -20,4 +22,6 @@ export {
   IconReply,
   IconX,
   IconFilter,
+  IconGoogle,
+  IconGithub,
 };

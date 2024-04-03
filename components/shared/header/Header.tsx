@@ -1,20 +1,22 @@
 import { mobileMenuSelectorVisibleAtom } from "@/context/atom";
 import { IconMenu } from "@/public/svgs";
-import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 
-const HEADER_HEIGHT = 60;
+const HEADER_HEIGHT = 66;
 const MOBILE_HEADER_HEIGHT = 60;
 const MOBILE_MENU_HEIGHT = 170;
 
 const Header = ({ url }: { url: string }) => {
-  const [menuVisible, setMenuVisible] = useAtom(mobileMenuSelectorVisibleAtom);
+  const [mobileMenuVisible, setMobileMenuVisible] = useAtom(
+    mobileMenuSelectorVisibleAtom
+  );
   const router = useRouter();
+  const menuVisible = url.split("/")[1] !== "auth";
   return (
-    <Container menuVisible={menuVisible}>
+    <Container menuVisible={mobileMenuVisible}>
       <Margin>
         <Flex>
           <Logo href={"/"}>
@@ -22,36 +24,46 @@ const Header = ({ url }: { url: string }) => {
             <span>.</span>
             <span>us</span>
           </Logo>
-          <LinkContainer>
-            <Menu href={"/team"} $select={url.split("/")[1] === "team"}>
-              모임
-            </Menu>
-            <Menu href={"/lounge"} $select={url.split("/")[1] === "lounge"}>
-              라운지
-            </Menu>
-            <Menu href={"/quiz"} $select={url === "/quiz"}>
-              퀴즈 라운지
-            </Menu>
-          </LinkContainer>
+          {menuVisible && (
+            <LinkContainer>
+              <Menu href={"/team"} $select={url.split("/")[1] === "team"}>
+                모임
+              </Menu>
+              <Menu href={"/lounge"} $select={url.split("/")[1] === "lounge"}>
+                라운지
+              </Menu>
+              <Menu href={"/quiz"} $select={url === "/quiz"}>
+                퀴즈 라운지
+              </Menu>
+            </LinkContainer>
+          )}
         </Flex>
-        <Flex>
-          <SvgBtn
-            onClick={() => {
-              setMenuVisible((prev) => !prev);
-            }}
-          >
-            <IconMenu width={27} height={27} />
-          </SvgBtn>
-          <LoginBtn>로그인</LoginBtn>
-        </Flex>
+        {menuVisible && (
+          <Flex>
+            <MobileBurgerBtn
+              onClick={() => {
+                setMobileMenuVisible((prev) => !prev);
+              }}
+            >
+              <IconMenu width={27} height={27} />
+            </MobileBurgerBtn>
+            <LoginBtn
+              onClick={() => {
+                router.push("/auth/login");
+              }}
+            >
+              로그인
+            </LoginBtn>
+          </Flex>
+        )}
       </Margin>
-      {menuVisible && (
+      {mobileMenuVisible && (
         <MenuContainer>
           <div>
             <MobileMenu
               onClick={() => {
                 router.push("/team");
-                setMenuVisible(false);
+                setMobileMenuVisible(false);
               }}
               $select={url.split("/")[1] === "team"}
             >
@@ -60,7 +72,7 @@ const Header = ({ url }: { url: string }) => {
             <MobileMenu
               onClick={() => {
                 router.push("/lounge");
-                setMenuVisible(false);
+                setMobileMenuVisible(false);
               }}
               $select={url.split("/")[1] === "lounge"}
             >
@@ -69,20 +81,18 @@ const Header = ({ url }: { url: string }) => {
             <MobileMenu
               onClick={() => {
                 router.push("/quiz");
-                setMenuVisible(false);
+                setMobileMenuVisible(false);
               }}
               $select={url === "/quiz"}
             >
               퀴즈 라운지
             </MobileMenu>
           </div>
-
           <MobileMenu
             onClick={() => {
-              router.push("/");
-              setMenuVisible(false);
+              router.push("/auth/login");
+              setMobileMenuVisible(false);
             }}
-            $select={url === "/"}
           >
             로그인
           </MobileMenu>
@@ -99,7 +109,7 @@ const Container = styled.header<{ menuVisible: boolean }>`
   z-index: 100;
   background-color: white;
 
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 768px) {
     height: ${(props) =>
       props.menuVisible
         ? `${MOBILE_MENU_HEIGHT + MOBILE_HEADER_HEIGHT}px}`
@@ -160,6 +170,7 @@ const Menu = styled(Link)<{ $select: boolean }>`
   font-size: 22px;
   font-weight: 800;
   margin-right: 30px;
+  margin-bottom: 5px;
   cursor: pointer;
   letter-spacing: -1px;
   text-decoration: none;
@@ -167,7 +178,7 @@ const Menu = styled(Link)<{ $select: boolean }>`
     props.$select ? "black" : props.theme.color.f_lightGray};
 `;
 
-const MobileMenu = styled.li<{ $select: boolean }>`
+const MobileMenu = styled.li<{ $select?: boolean }>`
   display: flex;
   align-items: center;
   height: 35px;
@@ -190,7 +201,7 @@ const MobileMenu = styled.li<{ $select: boolean }>`
 `;
 
 const Logo = styled(Link)`
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: -2px;
   color: black;
@@ -218,7 +229,7 @@ const LoginBtn = styled.button`
   }
 `;
 
-const SvgBtn = styled.button`
+const MobileBurgerBtn = styled.button`
   display: none;
   border: none;
   background: none;

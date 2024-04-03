@@ -4,7 +4,7 @@ export const getAuthErrorMsg = (code: string): string => {
     case "auth/user-not-found" || "auth/wrong-password":
       return "이메일 혹은 비밀번호가 일치하지 않습니다.";
     case "auth/email-already-in-use":
-      return "이미 사용하는 이메일입니다.";
+      return "이미 사용 중인 이메일입니다.";
     case "auth/weak-password":
       return "비밀번호를 6자 이상 입력해주세요";
     case "auth/missing-password":

@@ -44,7 +44,7 @@ const CommentItem = () => {
 
 const Container = styled.div`
   background: none;
-  border-bottom: 1px solid rgb(215, 226, 235);
+
   cursor: pointer;
   position: relative;
   padding-bottom: 15px;
@@ -67,7 +67,7 @@ const ReplyCommentContainer = styled.div`
   padding: 15px;
   border-radius: 7px;
   background-color: ${(props) => props.theme.color.bg_lightGray};
-  border: 1px solid ${(props) => props.theme.color.border_gray};
+  border: 1px solid ${(props) => props.theme.color.border_lightGray};
 `;
 
 const NameText = styled.p`

@@ -29,6 +29,7 @@ export const theme = {
 
     f_lightGray: "#98a8b9",
     border_gray: "rgb(215, 226, 235)",
+    border_lightGray: "#edeff2",
   },
 } as const;
 

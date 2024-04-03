@@ -10,7 +10,7 @@ import QuizPage from "./quiz";
 import { useAtomValue } from "jotai";
 import { teamFilterHeaderVisibleAtom } from "@/context/atom";
 import AuthPage from "./auth";
-import { AnimatePresence } from "framer-motion";
+
 import { signOut } from "firebase/auth";
 import { authService } from "@/utils/firebase/client";
 

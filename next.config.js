@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/team",
+        permanent: true,
+      },
+    ];
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,

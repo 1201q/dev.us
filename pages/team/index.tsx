@@ -1,6 +1,5 @@
 import nookies from "nookies";
 import { GetServerSideProps, Redirect } from "next";
-import { admin } from "@/utils/firebase/admin";
 
 import PageRender from "@/components/PageRender";
 import getUser from "@/utils/common/getUser";

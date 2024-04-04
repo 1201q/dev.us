@@ -6,7 +6,7 @@ import {
   withUserTokenSSR,
 } from "next-firebase-auth";
 
-const Demo = ({ thing }) => {
+const Demo = ({ thing }: { thing: User }) => {
   console.log(thing);
   const user = useUser();
 
@@ -21,7 +21,7 @@ export const getServerSideProps = withUserTokenSSR({
   whenUnauthed: AuthAction.REDIRECT_TO_LOGIN,
 })(async ({ user }) => {
   const token = await user?.getIdToken();
-  const response = await fetch("http://localhost:3000/api/auth", {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth`, {
     method: "GET",
     headers: {
       authorization: token,
@@ -35,4 +35,4 @@ export const getServerSideProps = withUserTokenSSR({
   };
 });
 
-export default withUser()(Demo);
+export default withUser<{ thing: User }>()(Demo);

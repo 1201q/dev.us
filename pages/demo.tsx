@@ -17,9 +17,7 @@ const Demo = ({ thing }: { thing: User }) => {
   );
 };
 
-export const getServerSideProps = withUserTokenSSR({
-  whenUnauthed: AuthAction.REDIRECT_TO_LOGIN,
-})(async ({ user }) => {
+export const getServerSideProps = withUserTokenSSR()(async ({ user }) => {
   const token = await user?.getIdToken();
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth`, {
     method: "GET",

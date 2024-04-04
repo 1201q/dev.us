@@ -30,7 +30,7 @@ export const getServerSideProps = withUserTokenSSR({
   const data = await response.json();
   return {
     props: {
-      thing: data.user || null,
+      thing: data.user || { null: null },
     },
   };
 });

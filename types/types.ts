@@ -6,3 +6,8 @@ export type SetStateActionWithReset<Value> =
   | typeof RESET
   | ((prev: Value) => Value | typeof RESET);
 export type SetHashAtom<T> = SetAtom<[SetStateActionWithReset<T>], void>;
+
+export interface SSRType {
+  isLogin: boolean;
+  url: string;
+}

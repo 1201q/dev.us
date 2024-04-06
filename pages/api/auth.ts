@@ -18,7 +18,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       user = await verifyIdToken(token);
     } catch (e) {
       console.error(e);
-      return res.status(403).json({ error: "Not authorized" });
     }
   }
 

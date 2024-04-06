@@ -1,27 +1,27 @@
-import nookies from "nookies";
-import { GetServerSideProps, Redirect } from "next";
-
 import PageRender from "@/components/PageRender";
-import getUser from "@/utils/common/getUser";
+import { SSRType } from "@/types/types";
+import getSSRAuth from "@/utils/common/getSSRAuth";
+import { AuthAction, withUser, withUserTokenSSR } from "next-firebase-auth";
 
-export interface ServerSideProps {
-  isLogin?: boolean;
-  uid?: string | null;
-  url?: string;
-}
-
-export default function Home({ uid, url }: ServerSideProps) {
-  return <PageRender props={{ uid, url }} />;
-}
-
-export const getServerSideProps: GetServerSideProps = async (
-  ctx: any
-): Promise<{ props: ServerSideProps } | { redirect: Redirect }> => {
-  const cookies = nookies.get(ctx);
-
-  let url = ctx?.resolvedUrl;
-
-  const { isLogin, uid } = await getUser(cookies.token);
-
-  return { props: { isLogin, uid, url } };
+const Team = ({ url, isLogin }: SSRType) => {
+  return <PageRender props={{ url, isLogin }} />;
 };
+
+export const getServerSideProps = withUserTokenSSR()(async (ctx) => {
+  const url = ctx.resolvedUrl;
+  let isLogin = false;
+
+  if (ctx.user?.id) {
+    await getSSRAuth(ctx.user);
+    isLogin = true;
+  }
+
+  return {
+    props: {
+      isLogin: isLogin,
+      url: url,
+    },
+  };
+});
+
+export default withUser<SSRType>()(Team);

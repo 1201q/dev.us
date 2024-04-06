@@ -12,6 +12,7 @@ const initAuth = () => {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID as string,
     databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL as string,
   };
+
   !getApps().length && initializeApp(firebaseClientInitConfig);
   init({
     authPageURL: "/auth/login",

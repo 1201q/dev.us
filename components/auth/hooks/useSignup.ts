@@ -39,7 +39,6 @@ const useSignup = (): Type => {
           await updateProfile(userObj.user, { displayName: name });
           setLoading(false);
           console.log(userObj);
-          router.replace("/");
         })
         .catch((error) => {
           console.log(error);

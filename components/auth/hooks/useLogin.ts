@@ -26,7 +26,6 @@ const useLogin = (): Type => {
       .then((res) => {
         setLoading(false);
         console.log(res);
-        router.replace("/");
       })
       .catch((error) => {
         console.log(error);

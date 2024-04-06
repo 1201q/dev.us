@@ -11,9 +11,6 @@ import { useAtomValue } from "jotai";
 import { teamFilterHeaderVisibleAtom } from "@/context/atom";
 import AuthPage from "./auth";
 
-import { signOut } from "firebase/auth";
-import { authService } from "@/utils/firebase/client";
-
 interface PageRenderProps {
   props?: any;
 }
@@ -24,7 +21,7 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
   return (
     <Container>
       <p style={{ position: "fixed", bottom: 0, zIndex: 200 }}>{props?.uid}</p>
-      {props?.uid && (
+      {/* {props?.uid && (
         <button
           onClick={async () => await signOut(authService)}
           style={{
@@ -38,8 +35,8 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
         >
           로그아웃
         </button>
-      )}
-      <Header url={props.url} />
+      )} */}
+      <Header url={props.url} isLogin={props.isLogin} />
       {props.url === "/team" && teamFilterHeaderVisible && <FilterHeader />}
       <Contents>
         {props.url === "/team" && <TeamPage />}

@@ -1,6 +1,10 @@
 import { mobileMenuSelectorVisibleAtom } from "@/context/atom";
 import { IconMenu } from "@/public/svgs";
+import { authService } from "@/utils/firebase/client";
+import { sign } from "crypto";
+import { signOut } from "firebase/auth";
 import { useAtom } from "jotai";
+import { useUser } from "next-firebase-auth";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
@@ -9,12 +13,13 @@ const HEADER_HEIGHT = 66;
 const MOBILE_HEADER_HEIGHT = 60;
 const MOBILE_MENU_HEIGHT = 170;
 
-const Header = ({ url }: { url: string }) => {
+const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
   const [mobileMenuVisible, setMobileMenuVisible] = useAtom(
     mobileMenuSelectorVisibleAtom
   );
   const router = useRouter();
   const menuVisible = url.split("/")[1] !== "auth";
+
   return (
     <Container menuVisible={mobileMenuVisible}>
       <Margin>
@@ -48,11 +53,21 @@ const Header = ({ url }: { url: string }) => {
               <IconMenu width={27} height={27} />
             </MobileBurgerBtn>
             <LoginBtn
-              onClick={() => {
-                router.push("/auth/login");
+              onClick={async () => {
+                if (isLogin) {
+                  await signOut(authService);
+
+                  fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/logout`, {
+                    method: "GET",
+                  }).then(() => {
+                    router.reload();
+                  });
+                } else {
+                  router.push("/auth/login");
+                }
               }}
             >
-              로그인
+              {isLogin ? "로그아웃" : "로그인"}
             </LoginBtn>
           </Flex>
         )}
@@ -89,12 +104,21 @@ const Header = ({ url }: { url: string }) => {
             </MobileMenu>
           </div>
           <MobileMenu
-            onClick={() => {
-              router.push("/auth/login");
-              setMobileMenuVisible(false);
+            onClick={async () => {
+              if (isLogin) {
+                await signOut(authService);
+                fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/logout`, {
+                  method: "GET",
+                }).then(() => {
+                  router.reload();
+                });
+              } else {
+                router.push("/auth/login");
+                setMobileMenuVisible(false);
+              }
             }}
           >
-            로그인
+            {isLogin ? "로그아웃" : "로그인"}
           </MobileMenu>
         </MenuContainer>
       )}

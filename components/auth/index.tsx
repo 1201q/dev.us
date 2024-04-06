@@ -42,10 +42,11 @@ const AuthPage = ({ mode }: { mode: "login" | "signup" }) => {
 
   const { loading, onLogin } = useLogin();
   const { loading: signupLoading, onSignup } = useSignup();
+
   return (
     <Container initial={{ opacity: 0.2 }} animate={{ opacity: 1 }}>
       <FormContainer
-        loading={loading || signupLoading}
+        $loading={loading || signupLoading}
         onSubmit={(e) => {
           e.preventDefault();
           setError(null);
@@ -163,14 +164,14 @@ const Container = styled(motion.div)`
   justify-content: center;
 `;
 
-const FormContainer = styled(motion.form)<{ loading: boolean }>`
+const FormContainer = styled(motion.form)<{ $loading: boolean }>`
   border-radius: 10px;
   padding: 25px 25px;
   width: 100%;
   max-width: 450px;
   border: 1px solid ${(props) => props.theme.color.border_gray};
-  opacity: ${(props) => (props.loading ? "0.2" : "1")};
-  pointer-events: ${(props) => props.loading && "none"};
+  opacity: ${(props) => (props.$loading ? "0.2" : "1")};
+  pointer-events: ${(props) => props.$loading && "none"};
 
   @media screen and (max-width: 768px) {
     padding: 0;

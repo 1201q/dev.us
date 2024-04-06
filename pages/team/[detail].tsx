@@ -11,7 +11,7 @@ export const getServerSideProps = withUserTokenSSR()(async (ctx) => {
   const url = ctx.resolvedUrl;
   let isLogin = false;
 
-  if (ctx.user) {
+  if (ctx.user?.id) {
     await getSSRAuth(ctx.user);
     isLogin = true;
   }

@@ -75,7 +75,7 @@ const ListHeader = styled.div`
 
   p {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 800;
   }
 `;
 
@@ -105,8 +105,12 @@ const FilterBtn = styled.button`
 
 const ListContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  @media screen and (max-width: 1150px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;

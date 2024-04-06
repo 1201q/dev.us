@@ -1,6 +1,6 @@
 import { authService } from "@/utils/firebase/client";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useRouter } from "next/router";
+
 import { useState } from "react";
 
 interface Type {
@@ -13,7 +13,6 @@ interface Type {
 }
 
 const useLogin = (): Type => {
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const onLogin = async (

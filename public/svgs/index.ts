@@ -10,6 +10,7 @@ import IconX from "./x.svg";
 import IconFilter from "./filter.svg";
 import IconGoogle from "./google.svg";
 import IconGithub from "./github.svg";
+import IconUser from "./user.svg";
 
 export {
   IconMenu,
@@ -24,4 +25,5 @@ export {
   IconFilter,
   IconGoogle,
   IconGithub,
+  IconUser,
 };

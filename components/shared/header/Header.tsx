@@ -1,12 +1,13 @@
 import { mobileMenuSelectorVisibleAtom } from "@/context/atom";
-import { IconMenu } from "@/public/svgs";
+import { IconMenu, IconUser } from "@/public/svgs";
 import { authService } from "@/utils/firebase/client";
-import { sign } from "crypto";
+
 import { signOut } from "firebase/auth";
 import { useAtom } from "jotai";
-import { useUser } from "next-firebase-auth";
+
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import styled from "styled-components";
 
 const HEADER_HEIGHT = 66;
@@ -19,7 +20,11 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
   );
   const router = useRouter();
   const menuVisible = url.split("/")[1] !== "auth";
-
+  useEffect(() => {
+    return () => {
+      setMobileMenuVisible(false);
+    };
+  }, []);
   return (
     <Container menuVisible={mobileMenuVisible}>
       <Margin>
@@ -52,23 +57,30 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
             >
               <IconMenu width={27} height={27} />
             </MobileBurgerBtn>
-            <LoginBtn
-              onClick={async () => {
-                if (isLogin) {
-                  await signOut(authService);
+            {!isLogin && (
+              <LoginBtn
+                onClick={async () => {
+                  if (isLogin) {
+                    await signOut(authService);
 
-                  fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/logout`, {
-                    method: "GET",
-                  }).then(() => {
-                    router.reload();
-                  });
-                } else {
-                  router.push("/auth/login");
-                }
-              }}
-            >
-              {isLogin ? "로그아웃" : "로그인"}
-            </LoginBtn>
+                    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/logout`, {
+                      method: "GET",
+                    }).then(() => {
+                      router.reload();
+                    });
+                  } else {
+                    router.push("/auth/login");
+                  }
+                }}
+              >
+                로그인
+              </LoginBtn>
+            )}
+            {isLogin && (
+              <UserBtn>
+                <IconUser width={27} height={27} />
+              </UserBtn>
+            )}
           </Flex>
         )}
       </Margin>
@@ -78,7 +90,6 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
             <MobileMenu
               onClick={() => {
                 router.push("/team");
-                setMobileMenuVisible(false);
               }}
               $select={url.split("/")[1] === "team"}
             >
@@ -87,7 +98,6 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
             <MobileMenu
               onClick={() => {
                 router.push("/lounge");
-                setMobileMenuVisible(false);
               }}
               $select={url.split("/")[1] === "lounge"}
             >
@@ -96,7 +106,6 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
             <MobileMenu
               onClick={() => {
                 router.push("/quiz");
-                setMobileMenuVisible(false);
               }}
               $select={url === "/quiz"}
             >
@@ -114,7 +123,6 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
                 });
               } else {
                 router.push("/auth/login");
-                setMobileMenuVisible(false);
               }
             }}
           >
@@ -262,6 +270,27 @@ const MobileBurgerBtn = styled.button`
 
   @media screen and (max-width: 768px) {
     display: block;
+  }
+`;
+
+const UserBtn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: ${(props) => props.theme.color.bg_gray};
+  overflow: hidden;
+  border: 1px solid ${(props) => props.theme.color.border_gray};
+
+  svg {
+    margin-top: 7px;
+    fill: ${(props) => props.theme.color.f_lightGray};
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
 

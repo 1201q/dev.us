@@ -28,7 +28,7 @@ const ListHeader = styled.div`
 
   p {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 800;
   }
 `;
 

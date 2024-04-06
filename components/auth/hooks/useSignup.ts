@@ -1,7 +1,7 @@
 import { getAuthErrorMsg } from "@/utils/common/getAuthErrorMsg";
 import { authService } from "@/utils/firebase/client";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { useRouter } from "next/router";
+
 import { useState } from "react";
 
 interface Type {
@@ -16,7 +16,6 @@ interface Type {
 }
 
 const useSignup = (): Type => {
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const onSignup = async (
@@ -38,7 +37,6 @@ const useSignup = (): Type => {
         .then(async (userObj) => {
           await updateProfile(userObj.user, { displayName: name });
           setLoading(false);
-          console.log(userObj);
         })
         .catch((error) => {
           console.log(error);

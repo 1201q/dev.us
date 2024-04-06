@@ -20,22 +20,6 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
 
   return (
     <Container>
-      <p style={{ position: "fixed", bottom: 0, zIndex: 200 }}>{props?.uid}</p>
-      {/* {props?.uid && (
-        <button
-          onClick={async () => await signOut(authService)}
-          style={{
-            position: "fixed",
-            bottom: 10,
-            right: 10,
-            zIndex: 200,
-            backgroundColor: "gray",
-            padding: 10,
-          }}
-        >
-          로그아웃
-        </button>
-      )} */}
       <Header url={props.url} isLogin={props.isLogin} />
       {props.url === "/team" && teamFilterHeaderVisible && <FilterHeader />}
       <Contents>

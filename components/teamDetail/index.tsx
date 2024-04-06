@@ -134,7 +134,7 @@ const Container = styled.div`
 
 const Content = styled.div`
   line-height: 160%;
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 const Side = styled.div`
@@ -176,7 +176,7 @@ const Button = styled.button<{ bg?: string }>`
 `;
 
 const TitleText = styled.p`
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
   line-height: normal;
 `;
@@ -188,7 +188,7 @@ const WriterInfoContainer = styled.div`
   margin-bottom: 30px;
 
   p {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: ${(props) => props.theme.color.f_lightGray};
   }
@@ -235,7 +235,7 @@ const InfoHeaderText = styled.p`
 `;
 
 const InfoText = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: ${(props) => props.theme.color.f_darkGray};
 `;

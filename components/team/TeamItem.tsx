@@ -7,7 +7,6 @@ const TeamItem = ({ title }: { title: string }) => {
     <Container>
       <Contents>
         <HeaderText href={"/team/123123213123"}>{title}</HeaderText>
-
         <OtherInfoContainer>
           <IconPeople />
           <OtherInfoText>모집 4명</OtherInfoText>
@@ -42,6 +41,14 @@ const Container = styled.div`
       box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 12px;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 20px;
+    border: none;
+    box-shadow: none;
+    height: 180px;
+    border-radius: 0px;
+  }
 `;
 
 const Contents = styled.div`
@@ -49,7 +56,7 @@ const Contents = styled.div`
 `;
 
 const BottomContents = styled.div`
-  width: 100%;
+  width: calc(100% - 40px);
   position: absolute;
   bottom: 22px;
   display: flex;
@@ -68,7 +75,7 @@ const Stack = styled.div`
 
 const HeaderText = styled(Link)`
   width: 100%;
-  height: 42px;
+  height: 46px;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.2px;

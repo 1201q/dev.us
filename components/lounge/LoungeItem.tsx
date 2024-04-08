@@ -5,7 +5,6 @@ import styled from "styled-components";
 const LoungeItem = ({ title }: { title: string }) => {
   return (
     <Container>
-      <Stack>질문</Stack>
       <HeaderText href={"/lounge/1231232131231"}>
         대학에서 오픈 소스 프로젝트를 해야하는데 대학에서 오픈 소스 프로젝트를
         해야하는데 대학에서 오픈 오픈 소스 프로젝트를 해야하는데 대학에서 오픈
@@ -20,7 +19,7 @@ const LoungeItem = ({ title }: { title: string }) => {
           <p>작성자 | 12분 전</p>
         </Flex>
         <Flex>
-          <IconComment width={13} height={13} />
+          <IconComment width={11} height={11} />
           <p>1</p>
         </Flex>
       </InfoContainer>
@@ -30,10 +29,15 @@ const LoungeItem = ({ title }: { title: string }) => {
 
 const Container = styled.div`
   background: none;
-  border-bottom: 1px solid rgb(215, 226, 235);
+
   cursor: pointer;
   position: relative;
-  padding-bottom: 15px;
+  padding: 18px 0px;
+  border-bottom: 1px solid ${(props) => props.theme.color.border_gray};
+
+  @media screen and (max-width: 768px) {
+    padding: 15px 20px;
+  }
 `;
 
 const Flex = styled.div`
@@ -41,23 +45,9 @@ const Flex = styled.div`
   align-items: center;
 `;
 
-const Stack = styled.div`
-  text-align: center;
-  width: 40px;
-  min-width: 40px;
-  height: min-content;
-  padding: 4px 8px;
-  color: #44576c;
-  background-color: #e9ecf3;
-  font-size: 13px;
-  font-weight: 500;
-  border-radius: 5px;
-  margin-bottom: 10px;
-`;
-
 const HeaderText = styled(Link)`
   height: auto;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.2px;
 
@@ -78,7 +68,7 @@ const HeaderText = styled(Link)`
 
 const ContentsText = styled.p`
   color: #98a8b9;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
 
   text-overflow: ellipsis;
@@ -94,8 +84,8 @@ const InfoContainer = styled.div`
   margin-top: 15px;
 
   p {
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 300;
     color: ${(props) => props.theme.color.f_lightGray};
   }
 

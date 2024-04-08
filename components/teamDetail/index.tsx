@@ -117,10 +117,10 @@ const TeamDetailPage = ({ id }: { id: string }) => {
 };
 
 const Container = styled.div`
-  margin-top: 30px;
+  margin-top: 20px;
   display: grid;
-  grid-template-columns: 7fr 3fr;
-  column-gap: 30px;
+  grid-template-columns: 8fr 3fr;
+  column-gap: 70px;
   row-gap: 30px;
 
   padding-bottom: 100px;
@@ -128,13 +128,17 @@ const Container = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 `;
 
 const Content = styled.div`
   line-height: 160%;
   font-size: 16px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0px 20px;
+  }
 `;
 
 const Side = styled.div`
@@ -143,15 +147,17 @@ const Side = styled.div`
   padding: 20px 20px;
   background-color: white;
   border: 1px solid rgb(215, 226, 235);
+  background-color: ${(props) => props.theme.color.bg_lightGray};
   border-radius: 10px;
   height: min-content;
 
   @media screen and (max-width: 768px) {
     position: relative;
     top: 0px;
-    padding: 0px 0px;
-
+    padding: 15px 20px 0px 20px;
     border: none;
+    background-color: ${(props) => props.theme.color.bg_lightGray2};
+    border-radius: 0px;
   }
 `;
 
@@ -201,6 +207,7 @@ const SideInfoContainer = styled.div`
   @media screen and (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 0;
   }
 `;
 

@@ -30,6 +30,10 @@ const ListHeader = styled.div`
     font-size: 22px;
     font-weight: 800;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 0px 20px;
+  }
 `;
 
 const FilterBtn = styled.button`

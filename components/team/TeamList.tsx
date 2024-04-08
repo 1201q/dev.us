@@ -63,6 +63,7 @@ const TeamList = () => {
 };
 
 const Container = styled.div`
+  width: 100%;
   margin-top: 20px;
   padding-bottom: 50px;
 `;
@@ -71,11 +72,15 @@ const ListHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding-bottom: 15px;
 
   p {
     font-size: 22px;
     font-weight: 800;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: ${(props) => props.theme.mediaQuery.mobileMargin};
   }
 `;
 
@@ -114,6 +119,9 @@ const ListContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    row-gap: 7px;
+    background-color: ${(props) => props.theme.color.bg_gray};
+    border-top: 1px solid ${(props) => props.theme.color.border_gray};
   }
 `;
 

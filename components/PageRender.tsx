@@ -10,6 +10,8 @@ import QuizPage from "./quiz";
 import { useAtomValue } from "jotai";
 import { teamFilterHeaderVisibleAtom } from "@/context/atom";
 import AuthPage from "./auth";
+import CreateHeader from "./create/CreateHeader";
+import CreatePage from "./create";
 
 interface PageRenderProps {
   props?: any;
@@ -20,10 +22,16 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
 
   return (
     <Container>
-      <Header url={props.url} isLogin={props.isLogin} />
+      {props.url.split("/")[1] !== "create" && (
+        <Header url={props.url} isLogin={props.isLogin} />
+      )}
+      {props.url.split("/")[1] === "create" && (
+        <CreateHeader url={props.url} isLogin={props.isLogin} />
+      )}
       {props.url === "/team" && teamFilterHeaderVisible && <FilterHeader />}
       <Contents>
         {props.url === "/team" && <TeamPage />}
+        {props.url.split("/")[1] === "create" && <CreatePage />}
         {props.url.split("/")[1] === "team" && props.url.split("/")[2] && (
           <TeamDetailPage id={props.url.split("/")[2]} />
         )}
@@ -54,6 +62,11 @@ const Contents = styled.div`
   @media screen and (max-width: 1150px) {
     width: ${(props) => props.theme.mediaQuery.mobileWidth};
     margin: ${(props) => props.theme.mediaQuery.mobileMargin};
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0px;
   }
 `;
 

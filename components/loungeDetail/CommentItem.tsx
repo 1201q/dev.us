@@ -71,14 +71,14 @@ const ReplyCommentContainer = styled.div`
 `;
 
 const NameText = styled.p`
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   margin-bottom: 10px;
 `;
 
 const CommentText = styled.p`
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 130%;
 `;
 
@@ -88,7 +88,7 @@ const InfoContainer = styled.div`
   margin-top: 15px;
 
   p {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 400;
     color: ${(props) => props.theme.color.f_lightGray};
   }

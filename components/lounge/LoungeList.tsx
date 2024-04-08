@@ -20,27 +20,32 @@ const LoungeList = () => {
   );
 };
 
-const Container = styled.div`
-  margin-top: 20px;
-  padding-bottom: 50px;
-`;
+const Container = styled.div``;
 
 const ListHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+
   height: 32px;
 
   p {
     font-size: 22px;
     font-weight: 800;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 0px 20px;
+  }
 `;
 
 const ListContainer = styled.div`
   display: grid;
-  row-gap: 15px;
+  gap: 0px;
+
+  @media screen and (max-width: 768px) {
+    row-gap: 0px;
+  }
 `;
 
 export default LoungeList;

@@ -15,6 +15,7 @@ export const theme = {
     bg_lightMint: "#f1fef7",
     bg_lightMint2: "rgba(119, 213, 169, 0.3)",
     bg_lightGray: "rgb(251, 251, 253)",
+    bg_lightGray2: "#f2f5f9",
     bg_gray: "#e9ecf3",
     bg_black: "#333333",
     bg_lightBlue: "#ecf3fe",

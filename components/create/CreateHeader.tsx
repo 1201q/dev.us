@@ -1,51 +1,36 @@
-import { mobileMenuSelectorVisibleAtom } from "@/context/atom";
-import { IconMenu, IconUser } from "@/public/svgs";
-import { authService } from "@/utils/firebase/client";
-
-import { signOut } from "firebase/auth";
-import { useAtom } from "jotai";
-
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
 import styled from "styled-components";
+import Toolbar from "./editor/Toolbar";
 
-const HEADER_HEIGHT = 66;
+const HEADER_HEIGHT = 60;
 const MOBILE_HEADER_HEIGHT = 60;
-const MOBILE_MENU_HEIGHT = 170;
 
-const CreateHeader = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
-  const [mobileMenuVisible, setMobileMenuVisible] = useAtom(
-    mobileMenuSelectorVisibleAtom
-  );
-
+const CreateHeader = ({ visible }: { visible: boolean }) => {
   return (
-    <Container menuVisible={mobileMenuVisible}>
-      <Margin>1</Margin>
+    <Container>
+      <Margin>
+        <ToolbarContainer visible={visible}>
+          <Toolbar />
+        </ToolbarContainer>
+      </Margin>
     </Container>
   );
 };
 
-const Container = styled.header<{ menuVisible: boolean }>`
-  position: relative;
+const Container = styled.header`
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   height: ${HEADER_HEIGHT}px;
   z-index: 100;
   background-color: white;
   border-bottom: 1px solid ${(props) => props.theme.color.border_gray};
-
-  @media screen and (max-width: 768px) {
-    height: ${(props) =>
-      props.menuVisible
-        ? `${MOBILE_MENU_HEIGHT + MOBILE_HEADER_HEIGHT}px}`
-        : `${MOBILE_HEADER_HEIGHT}px}`};
-  }
 `;
 
 const Margin = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: ${(props) => props.theme.mediaQuery.pcWidth};
   height: ${HEADER_HEIGHT}px;
   margin: ${(props) => props.theme.mediaQuery.pcMargin};
@@ -55,6 +40,13 @@ const Margin = styled.div`
     margin: ${(props) => props.theme.mediaQuery.mobileMargin};
     height: ${MOBILE_HEADER_HEIGHT}px;
   }
+`;
+
+const ToolbarContainer = styled.div<{ visible: boolean }>`
+  width: 330px;
+  opacity: ${(props) => (props.visible ? "1" : "0.3")};
+  pointer-events: ${(props) => (props.visible ? "" : "none")};
+  transition-duration: 0.2s;
 `;
 
 export default CreateHeader;

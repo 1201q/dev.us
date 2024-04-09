@@ -12,9 +12,16 @@ interface PropsType {
   options: OptionsType[];
   onSelect: (option: string) => void;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  height?: string;
 }
 
-const Menu = ({ options, onSelect, setIsOpen, includeAll }: PropsType) => {
+const Menu = ({
+  options,
+  onSelect,
+  setIsOpen,
+  includeAll,
+  height,
+}: PropsType) => {
   const selectRef = useRef<HTMLUListElement | null>(null);
 
   useOutSideClick([selectRef], () => {
@@ -22,7 +29,7 @@ const Menu = ({ options, onSelect, setIsOpen, includeAll }: PropsType) => {
   });
 
   return (
-    <Container ref={selectRef}>
+    <Container ref={selectRef} height={height}>
       {includeAll && (
         <Option
           key={"all"}
@@ -49,12 +56,12 @@ const Menu = ({ options, onSelect, setIsOpen, includeAll }: PropsType) => {
   );
 };
 
-const Container = styled.ul`
+const Container = styled.ul<{ height: string }>`
   width: 100%;
   max-height: 460px;
   position: absolute;
   left: 0;
-  top: 40px;
+  top: ${(props) => `calc(${props.height} + 5px)`};
   padding: 0px 10px 0px 10px;
   border-radius: 4px;
   background-color: white;

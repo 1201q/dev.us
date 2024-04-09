@@ -85,8 +85,8 @@ const SelectContainer = styled.div<{ isOpen: boolean }>`
   position: relative;
 
   svg {
-    width: 11px;
-    height: 11px;
+    width: 16px;
+    height: 16px;
     fill: ${(props) => props.theme.color.bg_black};
     position: absolute;
     right: 7px;

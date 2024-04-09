@@ -28,7 +28,7 @@ const CreatePage = () => {
   const [stacks, setStacks] = useState<string[]>([]);
   const [type, setType] = useState("all");
   const [count, setCount] = useState("all");
-  const [deadline, setDeadline] = useState("all");
+
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [datePickerOpen, setDatePickerOpen] = useState(false);
 
@@ -220,11 +220,11 @@ const StyledDatePicker = styled(ReactDatePicker)<{ isOpen: boolean }>`
 const CalendarContainer = styled.div`
   position: relative;
   svg {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     fill: ${(props) => props.theme.color.bg_black};
     position: absolute;
-    top: 13px;
+    top: 15px;
     right: 10px;
   }
 `;

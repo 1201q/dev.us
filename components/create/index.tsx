@@ -4,7 +4,6 @@ import CreateHeader from "./CreateHeader";
 import styled from "styled-components";
 import SelectOption from "../shared/dropdown/SelectOption";
 import {
-  teamSort,
   teamType,
   techField,
   techStack,
@@ -12,7 +11,11 @@ import {
 } from "@/constants/options";
 import useMenuSelect from "../shared/dropdown/hooks/useMenuSelect";
 import StackOption from "../shared/stacked-option/StackOption";
-import DatePicker from "../shared/dropdown/DatePicker";
+
+import { ko } from "date-fns/locale";
+import ReactDatePicker from "react-datepicker";
+import { selectStyles, unSelectStyles } from "@/styles/shared";
+import { IconCalendar } from "@/public/svgs";
 
 const Editor = dynamic(() => import("@/components/create/editor/Editor"), {
   loading: () => <div>...loading</div>,
@@ -26,6 +29,8 @@ const CreatePage = () => {
   const [type, setType] = useState("all");
   const [count, setCount] = useState("all");
   const [deadline, setDeadline] = useState("all");
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [datePickerOpen, setDatePickerOpen] = useState(false);
 
   return (
     <Container>
@@ -104,7 +109,20 @@ const CreatePage = () => {
           height="42px"
         />
         <SelectHeaderText>모집 마감일</SelectHeaderText>
-        <DatePicker height="42px" />
+        <CalendarContainer>
+          <StyledDatePicker
+            isOpen={datePickerOpen}
+            locale={ko}
+            dateFormat="yyyy년 M월 d일"
+            selected={selectedDate}
+            minDate={new Date()}
+            onChange={(date: Date) => setSelectedDate(date)}
+            onCalendarClose={() => setDatePickerOpen(false)}
+            onCalendarOpen={() => setDatePickerOpen(true)}
+            placeholderText="마감일을 선택하세요."
+          />
+          <IconCalendar />
+        </CalendarContainer>
       </MainContainer>
     </Container>
   );
@@ -182,6 +200,32 @@ const HeaderTextArea = styled(TextArea)`
 
   @media screen and (max-width: 768px) {
     font-size: 25px;
+  }
+`;
+
+const StyledDatePicker = styled(ReactDatePicker)<{ isOpen: boolean }>`
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  padding: 0px 10px 0px 10px;
+  border-radius: 7px;
+  font-size: 14px;
+  ${(props) => (props.isOpen ? selectStyles : unSelectStyles)};
+  position: relative;
+  cursor: pointer;
+`;
+
+const CalendarContainer = styled.div`
+  position: relative;
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: ${(props) => props.theme.color.bg_black};
+    position: absolute;
+    top: 13px;
+    right: 10px;
   }
 `;
 

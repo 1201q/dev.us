@@ -67,3 +67,12 @@ export const teamType = [
   { name: "스터디", option: "study" },
   { name: "대회/공모전", option: "competition" },
 ];
+
+export const personCount = [
+  { name: "미정", option: "all" },
+  { name: "1명", option: "1" },
+  { name: "2명", option: "2" },
+  { name: "3명", option: "3" },
+  { name: "4명", option: "4" },
+  { name: "5명 이상", option: "many" },
+];

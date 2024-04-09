@@ -75,7 +75,7 @@ const Stack = styled.div`
 
 const HeaderText = styled(Link)`
   width: 100%;
-  height: 46px;
+  height: 44px;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.2px;

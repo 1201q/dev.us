@@ -55,9 +55,9 @@ const FilterHeader = () => {
           />
         </div>
         <div>
-          <InfoHeaderText>모집분야</InfoHeaderText>
+          <InfoHeaderText>모집포지션</InfoHeaderText>
           <SelectOption
-            fixedDisplayOption={"모집 분야를 선택해주세요"}
+            fixedDisplayOption={"모집 포지션을 선택해주세요"}
             options={techField}
             onSelect={(o) => useMenuSelect(o, setSelectFieldDetailOption)}
           />

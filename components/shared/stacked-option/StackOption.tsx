@@ -2,7 +2,8 @@ import { IconX } from "@/public/svgs";
 import styled from "styled-components";
 import { colorThemeKeyType } from "@/styles/theme";
 import { SetHashAtom } from "@/types/types";
-import { useEffect, useState } from "react";
+import { Dispatch, useEffect, useState } from "react";
+import { SetStateAction } from "jotai";
 
 interface OptionsType {
   option: string;
@@ -17,7 +18,7 @@ const StackOption = ({
 }: {
   options: OptionsType[];
   option: string;
-  setAtom: SetHashAtom<string[]>;
+  setAtom: SetHashAtom<string[]> | Dispatch<SetStateAction<string[]>>;
   optionType?: string;
 }) => {
   const [initRender, setInitRender] = useState(false);

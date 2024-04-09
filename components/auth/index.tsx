@@ -162,6 +162,10 @@ const Container = styled(motion.div)`
   padding-top: 40px;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 0px 20px;
+  }
 `;
 
 const FormContainer = styled(motion.form)<{ $loading: boolean }>`

@@ -3,7 +3,16 @@ import { useState } from "react";
 import CreateHeader from "./CreateHeader";
 import styled from "styled-components";
 import SelectOption from "../shared/dropdown/SelectOption";
-import { teamSort } from "@/constants/options";
+import {
+  teamSort,
+  teamType,
+  techField,
+  techStack,
+  personCount,
+} from "@/constants/options";
+import useMenuSelect from "../shared/dropdown/hooks/useMenuSelect";
+import StackOption from "../shared/stacked-option/StackOption";
+import DatePicker from "../shared/dropdown/DatePicker";
 
 const Editor = dynamic(() => import("@/components/create/editor/Editor"), {
   loading: () => <div>...loading</div>,
@@ -12,6 +21,14 @@ const Editor = dynamic(() => import("@/components/create/editor/Editor"), {
 
 const CreatePage = () => {
   const [editorFocus, setEditorFocus] = useState(false);
+  const [positions, setPositions] = useState<string[]>([]);
+  const [stacks, setStacks] = useState<string[]>([]);
+  const [type, setType] = useState("all");
+  const [count, setCount] = useState("all");
+  const [deadline, setDeadline] = useState("all");
+
+  console.log(positions);
+  console.log(stacks);
 
   return (
     <Container>
@@ -28,44 +45,69 @@ const CreatePage = () => {
         <Editor setFocus={setEditorFocus} />
         <SelectHeaderText>모집 포지션</SelectHeaderText>
         <SelectOption
-          options={teamSort}
-          selectOption={undefined}
-          onSelect={(option) => console.log(option)}
-          includeAll={false}
+          options={techField}
+          fixedDisplayOption={"모집 포지션을 선택해주세요"}
+          onSelect={(o) => useMenuSelect(o, setPositions)}
+          includeAll={true}
           height="42px"
         />
-        <SelectHeaderText>기술 스택</SelectHeaderText>{" "}
+        {positions.length > 0 && (
+          <StackContainer>
+            {positions?.map((o) => {
+              if (techField.find((to) => to.option === o))
+                return (
+                  <StackOption
+                    key={o}
+                    setAtom={setPositions}
+                    option={o}
+                    options={techField}
+                    optionType="blue"
+                  />
+                );
+            })}
+          </StackContainer>
+        )}
+        <SelectHeaderText>기술 스택</SelectHeaderText>
         <SelectOption
-          options={teamSort}
-          selectOption={undefined}
-          onSelect={(option) => console.log(option)}
-          includeAll={false}
+          fixedDisplayOption={"기술 스택을 선택해주세요"}
+          options={techStack}
+          onSelect={(o) => useMenuSelect(o, setStacks)}
+          includeAll={true}
           height="42px"
         />
+        {stacks.length > 0 && (
+          <StackContainer>
+            {stacks?.map((o) => {
+              if (techStack.find((to) => to.option === o))
+                return (
+                  <StackOption
+                    key={o}
+                    setAtom={setStacks}
+                    option={o}
+                    options={techStack}
+                  />
+                );
+            })}
+          </StackContainer>
+        )}
         <SelectHeaderText>모임 종류</SelectHeaderText>{" "}
         <SelectOption
-          options={teamSort}
-          selectOption={undefined}
-          onSelect={(option) => console.log(option)}
+          options={teamType}
+          selectOption={type}
+          onSelect={(option) => setType(option)}
           includeAll={false}
           height="42px"
         />
         <SelectHeaderText>모집 인원</SelectHeaderText>{" "}
         <SelectOption
-          options={teamSort}
-          selectOption={undefined}
-          onSelect={(option) => console.log(option)}
+          options={personCount}
+          selectOption={count}
+          onSelect={(option) => setCount(option)}
           includeAll={false}
           height="42px"
         />
-        <SelectHeaderText>모집 마감일</SelectHeaderText>{" "}
-        <SelectOption
-          options={teamSort}
-          selectOption={undefined}
-          onSelect={(option) => console.log(option)}
-          includeAll={false}
-          height="42px"
-        />
+        <SelectHeaderText>모집 마감일</SelectHeaderText>
+        <DatePicker height="42px" />
       </MainContainer>
     </Container>
   );
@@ -84,6 +126,20 @@ const MainContainer = styled.div`
     padding: 0px 20px;
   }
 `;
+
+const StackContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 7px;
+  row-gap: 7px;
+
+  height: min-content;
+  max-height: 100%;
+
+  overflow-y: scroll;
+  margin-top: 15px;
+`;
+
 const SmallHeaderText = styled.p`
   font-size: 22px;
   font-weight: 700;
@@ -98,8 +154,7 @@ const SelectHeaderText = styled(SmallHeaderText)`
 const TextArea = styled.textarea`
   width: 100%;
   min-height: 120px;
-  height: fit-content;
-
+  line-height: 140%;
   resize: none;
   font-size: 17px;
   margin-top: 20px;

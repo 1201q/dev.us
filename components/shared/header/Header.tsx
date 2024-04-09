@@ -176,7 +176,7 @@ const Margin = styled.div`
   height: ${HEADER_HEIGHT}px;
   margin: ${(props) => props.theme.mediaQuery.pcMargin};
 
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1200px) {
     width: ${(props) => props.theme.mediaQuery.mobileWidth};
     margin: ${(props) => props.theme.mediaQuery.mobileMargin};
     height: ${MOBILE_HEADER_HEIGHT}px;

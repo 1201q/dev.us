@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import "@/styles/reset.css";
-
+import "@/styles/markdown.css";
 import "@/utils/firebase/client";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@/styles/theme";

@@ -15,6 +15,7 @@ interface PropsType {
   onSelect: (option: string) => void;
   includeAll?: boolean;
   fixedDisplayOption?: string;
+  height?: string;
 }
 
 const SelectOption = ({
@@ -23,6 +24,7 @@ const SelectOption = ({
   selectOption,
   includeAll = true,
   fixedDisplayOption,
+  height = "32px",
 }: PropsType) => {
   const [isOpen, setIsOpen] = useState(false);
   const [initRender, setInitRender] = useState(false);
@@ -45,7 +47,7 @@ const SelectOption = ({
   }, []);
 
   return (
-    <Container>
+    <Container height={height}>
       <SelectContainer onClick={() => setIsOpen(true)} isOpen={isOpen}>
         {initRender && name}
         <IconDown />
@@ -56,15 +58,16 @@ const SelectOption = ({
           setIsOpen={setIsOpen}
           options={options}
           onSelect={onSelect}
+          height={height}
         />
       )}
     </Container>
   );
 };
 
-const Container = styled.div`
+const Container = styled.div<{ height: string }>`
   position: relative;
-  height: 32px;
+  height: ${(props) => props.height};
 
   cursor: pointer;
 `;

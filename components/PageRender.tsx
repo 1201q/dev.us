@@ -10,7 +10,6 @@ import QuizPage from "./quiz";
 import { useAtomValue } from "jotai";
 import { teamFilterHeaderVisibleAtom } from "@/context/atom";
 import AuthPage from "./auth";
-import CreateHeader from "./create/CreateHeader";
 import CreatePage from "./create";
 
 interface PageRenderProps {
@@ -25,9 +24,7 @@ const PageRender: React.FC<PageRenderProps> = ({ props }) => {
       {props.url.split("/")[1] !== "create" && (
         <Header url={props.url} isLogin={props.isLogin} />
       )}
-      {props.url.split("/")[1] === "create" && (
-        <CreateHeader url={props.url} isLogin={props.isLogin} />
-      )}
+
       {props.url === "/team" && teamFilterHeaderVisible && <FilterHeader />}
       <Contents>
         {props.url === "/team" && <TeamPage />}

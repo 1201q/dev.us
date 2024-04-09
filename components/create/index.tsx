@@ -27,9 +27,6 @@ const CreatePage = () => {
   const [count, setCount] = useState("all");
   const [deadline, setDeadline] = useState("all");
 
-  console.log(positions);
-  console.log(stacks);
-
   return (
     <Container>
       <CreateHeader visible={editorFocus} />

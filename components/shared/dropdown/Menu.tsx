@@ -12,6 +12,7 @@ interface PropsType {
   options: OptionsType[];
   onSelect: (option: string) => void;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+
   height: string;
 }
 

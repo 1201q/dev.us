@@ -5,6 +5,9 @@ import { useAtom } from "jotai";
 import { sortOptionAtom } from "@/context/location";
 import { teamFilterHeaderVisibleAtom } from "@/context/atom";
 import { teamSort } from "@/constants/options";
+import { motion } from "framer-motion";
+
+import Banner from "../shared/banner/Banner";
 
 const TeamList = () => {
   const mockData = [
@@ -35,7 +38,12 @@ const TeamList = () => {
   const [, setFilterVisible] = useAtom(teamFilterHeaderVisibleAtom);
 
   return (
-    <Container>
+    <Container initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <Banner
+        firstText="나에게 맞는 스터디와"
+        secondText="사이드 프로젝트를 탐색해보세요"
+        img="banner1"
+      />
       <ListHeader>
         <p>모임 리스트</p>
 
@@ -62,13 +70,13 @@ const TeamList = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   width: 100%;
-  margin-top: 20px;
+  margin-top: 0px;
   padding-bottom: 50px;
 `;
 
-const ListHeader = styled.div`
+const ListHeader = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,7 +116,7 @@ const FilterBtn = styled.button`
   }
 `;
 
-const ListContainer = styled.div`
+const ListContainer = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;

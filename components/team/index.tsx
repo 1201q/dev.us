@@ -1,11 +1,7 @@
 import TeamList from "./TeamList";
 
 const TeamPage = () => {
-  return (
-    <>
-      <TeamList />
-    </>
-  );
+  return <TeamList />;
 };
 
 export default TeamPage;

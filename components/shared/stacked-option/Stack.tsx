@@ -4,13 +4,14 @@ import { colorThemeKeyType } from "@/styles/theme";
 import { SetHashAtom } from "@/types/types";
 import { Dispatch, useEffect, useState } from "react";
 import { SetStateAction } from "jotai";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface OptionsType {
   option: string;
   name: string;
 }
 
-const StackOption = ({
+const Stack = ({
   options,
   option,
   setAtom,
@@ -57,6 +58,10 @@ const StackOption = ({
         <StackItem
           onClick={() => onRemoveOption(option, setAtom)}
           colors={getColor(optionType)}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={{ duration: 0.18, type: "spring" }}
         >
           <p>{options.find((o) => o.option === option)?.name}</p>
           <IconX width={8} height={8} />
@@ -66,7 +71,7 @@ const StackOption = ({
   );
 };
 
-const StackItem = styled.div<{
+const StackItem = styled(motion.div)<{
   colors: { f: colorThemeKeyType; bg: colorThemeKeyType };
 }>`
   display: flex;
@@ -89,6 +94,10 @@ const StackItem = styled.div<{
   svg {
     fill: ${(props) => props.theme.color[props.colors.f]};
   }
+
+  :hover {
+    filter: brightness(0.9);
+  }
 `;
 
-export default StackOption;
+export default Stack;

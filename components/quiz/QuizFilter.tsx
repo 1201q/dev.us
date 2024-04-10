@@ -15,10 +15,11 @@ import {
 
 import SelectOption from "../shared/dropdown/SelectOption";
 import SearchInput from "../shared/search-input/SearchInput";
-import StackOption from "../shared/stacked-option/StackOption";
 import useMenuSelect from "../shared/dropdown/hooks/useMenuSelect";
 import { IconX } from "@/public/svgs";
 import { quizFilterVisibleAtom } from "@/context/atom";
+import StackOptions from "../shared/stacked-option/StackOptions";
+import { AnimatePresence, motion } from "framer-motion";
 
 const QuizFilter = () => {
   const [selectFieldOption, setSelectFieldOption] =
@@ -72,61 +73,29 @@ const QuizFilter = () => {
       />
 
       <StackContainer>
-        <>
-          {selectFieldOption?.map((o) => {
-            if (quizField.find((to) => to.option === o))
-              return (
-                <StackOption
-                  key={o}
-                  setAtom={setSelectFieldOption}
-                  option={o}
-                  options={quizField}
-                  optionType="blue"
-                />
-              );
-          })}
-        </>
-        <>
-          {selectDifficultyOption?.map((o) => {
-            if (quizDifficulty.find((to) => to.option === o))
-              return (
-                <StackOption
-                  key={o}
-                  setAtom={setSelectDifficultyOption}
-                  option={o}
-                  options={quizDifficulty}
-                  optionType="red"
-                />
-              );
-          })}
-        </>
-        <>
-          {selectFieldDetailOption?.map((o) => {
-            if (techField.find((to) => to.option === o))
-              return (
-                <StackOption
-                  key={o}
-                  setAtom={setSelectFieldDetailOption}
-                  option={o}
-                  options={techField}
-                  optionType="green"
-                />
-              );
-          })}
-        </>
-        <>
-          {selectStackOptions?.map((o) => {
-            if (techStack.find((to) => to.option === o))
-              return (
-                <StackOption
-                  key={o}
-                  setAtom={setSelectStackOption}
-                  option={o}
-                  options={techStack}
-                />
-              );
-          })}
-        </>
+        <StackOptions
+          selectOptions={selectFieldOption}
+          options={quizField}
+          setOption={setSelectFieldOption}
+          type={"blue"}
+        />
+        <StackOptions
+          selectOptions={selectDifficultyOption}
+          options={quizDifficulty}
+          setOption={setSelectDifficultyOption}
+          type={"red"}
+        />
+        <StackOptions
+          selectOptions={selectFieldDetailOption}
+          options={techField}
+          setOption={setSelectFieldDetailOption}
+          type={"green"}
+        />
+        <StackOptions
+          selectOptions={selectStackOptions}
+          options={techStack}
+          setOption={setSelectStackOption}
+        />
       </StackContainer>
     </Container>
   );
@@ -161,7 +130,7 @@ const InfoHeaderText = styled.p`
   margin-top: 20px;
 `;
 
-const StackContainer = styled.div`
+const StackContainer = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   column-gap: 7px;
@@ -172,10 +141,6 @@ const StackContainer = styled.div`
 
   overflow-y: scroll;
   margin-top: 15px;
-
-  @media screen and (max-width: 768px) {
-    margin-top: 25px;
-  }
 `;
 
 const MobileHeader = styled.div`

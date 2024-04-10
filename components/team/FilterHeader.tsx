@@ -7,13 +7,14 @@ import { useAtom } from "jotai";
 import { teamFilterHeaderVisibleAtom } from "@/context/atom";
 import SelectOption from "../shared/dropdown/SelectOption";
 import SearchInput from "../shared/search-input/SearchInput";
-import StackOption from "../shared/stacked-option/StackOption";
 import {
   quizFieldDetailOptionsAtom,
   quizStackOptionsAtom,
   teamTypeOptionsAtom,
 } from "@/context/location";
 import useMenuSelect from "../shared/dropdown/hooks/useMenuSelect";
+import StackOptions from "../shared/stacked-option/StackOptions";
+import useBlockScroll from "../shared/hooks/useBlockScroll";
 
 const FilterHeader = () => {
   const [borderVisible, setBorderVisible] = useState(false);
@@ -32,7 +33,7 @@ const FilterHeader = () => {
     useAtom(quizStackOptionsAtom);
   const [selectTeamTypeOptions, setSelectTeamTypeOptions] =
     useAtom(teamTypeOptionsAtom);
-
+  useBlockScroll();
   return (
     <Container borderVisible={borderVisible}>
       <MobileHeader>
@@ -72,47 +73,23 @@ const FilterHeader = () => {
         </div>
       </OptionContainer>
       <StackContainer>
-        <>
-          {selectStackOptions.map((o) => {
-            if (techStack.find((to) => to.option === o))
-              return (
-                <StackOption
-                  key={o}
-                  setAtom={setSelectStackOption}
-                  option={o}
-                  options={techStack}
-                />
-              );
-          })}
-        </>
-        <>
-          {selectFieldDetailOption.map((o) => {
-            if (techField.find((to) => to.option === o))
-              return (
-                <StackOption
-                  key={o}
-                  setAtom={setSelectFieldDetailOption}
-                  option={o}
-                  options={techField}
-                  optionType="green"
-                />
-              );
-          })}
-        </>
-        <>
-          {selectTeamTypeOptions.map((o) => {
-            if (teamType.find((to) => to.option === o))
-              return (
-                <StackOption
-                  key={o}
-                  setAtom={setSelectTeamTypeOptions}
-                  option={o}
-                  options={teamType}
-                  optionType="red"
-                />
-              );
-          })}
-        </>
+        <StackOptions
+          selectOptions={selectStackOptions}
+          options={techStack}
+          setOption={setSelectStackOption}
+        />
+        <StackOptions
+          selectOptions={selectFieldDetailOption}
+          options={techField}
+          setOption={setSelectFieldDetailOption}
+          type={"green"}
+        />
+        <StackOptions
+          selectOptions={selectTeamTypeOptions}
+          options={teamType}
+          setOption={setSelectTeamTypeOptions}
+          type={"red"}
+        />
       </StackContainer>
     </Container>
   );
@@ -138,7 +115,7 @@ const Container = styled.div<{ borderVisible: boolean }>`
     height: 100dvh;
   }
 
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1200px) {
     padding: ${(props) => props.theme.mediaQuery.mobileMargin};
     padding-bottom: 15px;
     padding-top: 10px;
@@ -193,10 +170,6 @@ const StackContainer = styled.div`
 
   overflow-y: scroll;
   margin-top: 15px;
-
-  @media screen and (max-width: 768px) {
-    margin-top: 25px;
-  }
 `;
 
 const InfoHeaderText = styled.p`

@@ -10,12 +10,12 @@ import {
   personCount,
 } from "@/constants/options";
 import useMenuSelect from "../shared/dropdown/hooks/useMenuSelect";
-import StackOption from "../shared/stacked-option/StackOption";
 
 import { ko } from "date-fns/locale";
 import ReactDatePicker from "react-datepicker";
 import { selectStyles, unSelectStyles } from "@/styles/shared";
 import { IconCalendar } from "@/public/svgs";
+import StackOptions from "../shared/stacked-option/StackOptions";
 
 const Editor = dynamic(() => import("@/components/create/editor/Editor"), {
   loading: () => <div>...loading</div>,
@@ -55,18 +55,12 @@ const CreatePage = () => {
         />
         {positions.length > 0 && (
           <StackContainer>
-            {positions?.map((o) => {
-              if (techField.find((to) => to.option === o))
-                return (
-                  <StackOption
-                    key={o}
-                    setAtom={setPositions}
-                    option={o}
-                    options={techField}
-                    optionType="blue"
-                  />
-                );
-            })}
+            <StackOptions
+              selectOptions={positions}
+              options={techField}
+              setOption={setPositions}
+              type="blue"
+            />
           </StackContainer>
         )}
         <SelectHeaderText>기술 스택</SelectHeaderText>
@@ -79,17 +73,11 @@ const CreatePage = () => {
         />
         {stacks.length > 0 && (
           <StackContainer>
-            {stacks?.map((o) => {
-              if (techStack.find((to) => to.option === o))
-                return (
-                  <StackOption
-                    key={o}
-                    setAtom={setStacks}
-                    option={o}
-                    options={techStack}
-                  />
-                );
-            })}
+            <StackOptions
+              selectOptions={stacks}
+              options={techStack}
+              setOption={setStacks}
+            />
           </StackContainer>
         )}
         <SelectHeaderText>모임 종류</SelectHeaderText>{" "}

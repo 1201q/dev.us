@@ -1,5 +1,5 @@
 import { mobileMenuSelectorVisibleAtom } from "@/context/atom";
-import { IconMenu, IconUser } from "@/public/svgs";
+import { IconMenu, IconUser, IconX } from "@/public/svgs";
 import { authService } from "@/utils/firebase/client";
 
 import { signOut } from "firebase/auth";
@@ -9,10 +9,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import styled from "styled-components";
+import MobileMenu from "./MobileMenu";
+import { AnimatePresence } from "framer-motion";
 
 const HEADER_HEIGHT = 66;
 const MOBILE_HEADER_HEIGHT = 60;
-const MOBILE_MENU_HEIGHT = 170;
 
 const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
   const [mobileMenuVisible, setMobileMenuVisible] = useAtom(
@@ -35,17 +36,20 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
             <span>us</span>
           </Logo>
           {menuVisible && (
-            <LinkContainer>
-              <Menu href={"/team"} $select={url.split("/")[1] === "team"}>
+            <NavContainer>
+              <NavMenu href={"/team"} $select={url.split("/")[1] === "team"}>
                 모임
-              </Menu>
-              <Menu href={"/lounge"} $select={url.split("/")[1] === "lounge"}>
+              </NavMenu>
+              <NavMenu
+                href={"/lounge"}
+                $select={url.split("/")[1] === "lounge"}
+              >
                 라운지
-              </Menu>
-              <Menu href={"/quiz"} $select={url === "/quiz"}>
+              </NavMenu>
+              <NavMenu href={"/quiz"} $select={url === "/quiz"}>
                 퀴즈 라운지
-              </Menu>
-            </LinkContainer>
+              </NavMenu>
+            </NavContainer>
           )}
         </Flex>
         {menuVisible && (
@@ -55,7 +59,11 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
                 setMobileMenuVisible((prev) => !prev);
               }}
             >
-              <IconMenu width={27} height={27} />
+              {mobileMenuVisible ? (
+                <IconX width={20} height={20} style={{ marginRight: "2px" }} />
+              ) : (
+                <IconMenu width={27} height={27} />
+              )}
             </MobileBurgerBtn>
             {!isLogin && (
               <LoginBtn
@@ -84,52 +92,15 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
           </Flex>
         )}
       </Margin>
-      {mobileMenuVisible && (
-        <MenuContainer>
-          <div>
-            <MobileMenu
-              onClick={() => {
-                router.push("/team");
-              }}
-              $select={url.split("/")[1] === "team"}
-            >
-              모임
-            </MobileMenu>
-            <MobileMenu
-              onClick={() => {
-                router.push("/lounge");
-              }}
-              $select={url.split("/")[1] === "lounge"}
-            >
-              라운지
-            </MobileMenu>
-            <MobileMenu
-              onClick={() => {
-                router.push("/quiz");
-              }}
-              $select={url === "/quiz"}
-            >
-              퀴즈 라운지
-            </MobileMenu>
-          </div>
+      <AnimatePresence>
+        {mobileMenuVisible && (
           <MobileMenu
-            onClick={async () => {
-              if (isLogin) {
-                await signOut(authService);
-                fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/logout`, {
-                  method: "GET",
-                }).then(() => {
-                  router.reload();
-                });
-              } else {
-                router.push("/auth/login");
-              }
-            }}
-          >
-            {isLogin ? "로그아웃" : "로그인"}
-          </MobileMenu>
-        </MenuContainer>
-      )}
+            isLogin={isLogin}
+            url={url}
+            mobileMenuVisible={mobileMenuVisible}
+          />
+        )}
+      </AnimatePresence>
     </Container>
   );
 };
@@ -142,29 +113,7 @@ const Container = styled.header<{ menuVisible: boolean }>`
   background-color: white;
 
   @media screen and (max-width: 768px) {
-    height: ${(props) =>
-      props.menuVisible
-        ? `${MOBILE_MENU_HEIGHT + MOBILE_HEADER_HEIGHT}px}`
-        : `${MOBILE_HEADER_HEIGHT}px}`};
-  }
-`;
-
-const MenuContainer = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: static;
-  top: 0;
-  width: 100%;
-  height: ${MOBILE_MENU_HEIGHT}px;
-
-  background-color: white;
-  padding: 0px 0px 10px 0px;
-
-  border-bottom: ${(props) => `1px solid ${props.theme.color.border_gray}`};
-
-  @media screen and (min-width: 768px) {
-    display: none;
+    height: ${MOBILE_HEADER_HEIGHT}px;
   }
 `;
 
@@ -175,6 +124,7 @@ const Margin = styled.div`
   width: ${(props) => props.theme.mediaQuery.pcWidth};
   height: ${HEADER_HEIGHT}px;
   margin: ${(props) => props.theme.mediaQuery.pcMargin};
+  background-color: white;
 
   @media screen and (max-width: 1200px) {
     width: ${(props) => props.theme.mediaQuery.mobileWidth};
@@ -188,7 +138,7 @@ const Flex = styled.div`
   align-items: center;
 `;
 
-const LinkContainer = styled.div`
+const NavContainer = styled.div`
   display: flex;
   margin-top: 11px;
   margin-left: 40px;
@@ -198,7 +148,7 @@ const LinkContainer = styled.div`
   }
 `;
 
-const Menu = styled(Link)<{ $select: boolean }>`
+const NavMenu = styled(Link)<{ $select: boolean }>`
   font-size: 22px;
   font-weight: 800;
   margin-right: 30px;
@@ -208,28 +158,6 @@ const Menu = styled(Link)<{ $select: boolean }>`
   text-decoration: none;
   color: ${(props) =>
     props.$select ? "black" : props.theme.color.f_lightGray};
-`;
-
-const MobileMenu = styled.li<{ $select?: boolean }>`
-  display: flex;
-  align-items: center;
-  height: 35px;
-  font-size: 16px;
-  font-weight: ${(props) => (props.$select ? "700" : "500")};
-
-  cursor: pointer;
-  letter-spacing: -1px;
-  text-decoration: none;
-  color: ${(props) =>
-    props.$select ? "black" : props.theme.color.f_lightGray};
-
-  padding: 0px 21px;
-
-  :hover {
-    color: black;
-    transition-duration: 0.3s;
-    font-weight: 700;
-  }
 `;
 
 const Logo = styled(Link)`

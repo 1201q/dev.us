@@ -58,9 +58,9 @@ const Stack = ({
         <StackItem
           onClick={() => onRemoveOption(option, setAtom)}
           colors={getColor(optionType)}
-          initial={{ scale: 0 }}
+          initial={{ scale: 0.5 }}
           animate={{ scale: 1 }}
-          exit={{ scale: 0 }}
+          exit={{ scale: 0, transition: { duration: 0.15 } }}
           transition={{ duration: 0.18, type: "spring" }}
         >
           <p>{options.find((o) => o.option === option)?.name}</p>

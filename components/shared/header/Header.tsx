@@ -22,7 +22,9 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
   const router = useRouter();
   const menuVisible = url.split("/")[1] !== "auth";
   useEffect(() => {
+    console.log("실행");
     return () => {
+      console.log("꺼");
       setMobileMenuVisible(false);
     };
   }, []);
@@ -92,7 +94,7 @@ const Header = ({ url, isLogin }: { url: string; isLogin: boolean }) => {
           </Flex>
         )}
       </Margin>
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {mobileMenuVisible && (
           <MobileMenu
             isLogin={isLogin}

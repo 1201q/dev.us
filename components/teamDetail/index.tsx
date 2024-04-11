@@ -1,4 +1,5 @@
 import { IconHeart } from "@/public/svgs";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const TeamDetailPage = ({ id }: { id: string }) => {
@@ -116,7 +117,7 @@ const TeamDetailPage = ({ id }: { id: string }) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   margin-top: 20px;
   display: grid;
   grid-template-columns: 8fr 3fr;
@@ -132,7 +133,7 @@ const Container = styled.div`
   }
 `;
 
-const Content = styled.div`
+const Content = styled(motion.div)`
   line-height: 160%;
   font-size: 16px;
 
